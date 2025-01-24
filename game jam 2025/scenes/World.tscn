@@ -1,0 +1,13 @@
+[gd_scene format=3 uid="uid://piqdrfup6epg"]
+
+[node name="World" type="Node2D"]
+metadata/economy = 0.0
+metadata/climate = 0.0
+metadata/tech = 0.0
+metadata/progress = 0.0
+metadata/international_stab = 0.0
+metadata/social_stab = 0.0
+metadata/Might = 0.0
+metadata/bubble_res = 0.0
+metadata/bubble_akn = 0.0
+metadata/world_type = 0

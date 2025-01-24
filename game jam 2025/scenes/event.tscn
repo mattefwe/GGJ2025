@@ -1,0 +1,6 @@
+[gd_scene format=3 uid="uid://cy44wg5qb5e74"]
+
+[node name="Event" type="Node2D"]
+metadata/id = 0
+metadata/title = ""
+metadata/desc = ""
