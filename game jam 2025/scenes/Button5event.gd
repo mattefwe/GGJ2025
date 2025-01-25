@@ -7,6 +7,7 @@ var id = Evetlist.arrayevents[4]
 func _ready():
 	print(Evetlist.arrayevents)
 	print(id)
+	set_text(Evetlist.events[id-1]["title"])
 func _on_pressed():
 	click_pressed.play()
 	print(id)
