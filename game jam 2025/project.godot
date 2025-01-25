@@ -11,8 +11,8 @@ config_version=5
 [application]
 
 config/name="Popping the Fermi Paradox"
-run/main_scene="res://scenes/eventselection.tscn"
-config/features=PackedStringArray("4.2", "GL Compatibility")
+run/main_scene="res://scenes/title_screen.tscn"
+config/features=PackedStringArray("4.3", "GL Compatibility")
 config/icon="res://icon.svg"
 
 [autoload]
@@ -21,7 +21,12 @@ Settings="*res://autoload/settings.gd"
 Evetlist="*res://autoload/evetlist.gd"
 Buttontext="*res://autoload/Buttontext.gd"
 Level="*res://autoload/level.gd"
+<<<<<<< HEAD
 WorldState="*res://autoload/world_state.gd"
+=======
+Music="*res://scenes/music.tscn"
+Global="*res://scripts/Global.gd"
+>>>>>>> modifca55
 
 [display]
 
