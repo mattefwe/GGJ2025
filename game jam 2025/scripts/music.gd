@@ -7,3 +7,7 @@ func _process(delta: float) -> void:
 		$TitleMusic.stop()
 		$BackgroundMusic.play()
 		Global.music = 0
+	if Global.music == 1:
+		$BackgroundMusic.stop()
+		$TitleMusic.play()
+		Global.music = 0
