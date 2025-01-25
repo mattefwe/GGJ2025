@@ -47,6 +47,7 @@ offset_bottom = 576.0
 theme_override_styles/panel = SubResource("StyleBoxTexture_pb5lo")
 
 [node name="PlayButton" type="Button" parent="Panel"]
+layout_mode = 0
 offset_left = 71.0
 offset_top = 386.0
 offset_right = 258.0

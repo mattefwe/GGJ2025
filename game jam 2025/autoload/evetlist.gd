@@ -102,4 +102,4 @@ func trigger_option(id):
 	for x in options:
 		#print(x, options[x])
 		WorldState.world_update(x,options[x])
-	get_tree().change_scene_to_file("res://scenes/eventselection.tscn")
+	get_tree().change_scene_to_file("res://scenes/in_game.tscn")
