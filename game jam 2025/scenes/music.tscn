@@ -9,6 +9,7 @@ script = ExtResource("1_s8axm")
 
 [node name="BackgroundMusic" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("2_d624p")
+volume_db = 3.467
 
 [node name="TitleMusic" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("1_j56h7")
