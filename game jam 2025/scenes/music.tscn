@@ -1,0 +1,16 @@
+[gd_scene load_steps=4 format=3 uid="uid://e4gv1dmp564"]
+
+[ext_resource type="AudioStream" uid="uid://bp7pr06xwl1xl" path="res://assets/sounds/INTRO copia.ogg" id="1_j56h7"]
+[ext_resource type="Script" path="res://scripts/music.gd" id="1_s8axm"]
+[ext_resource type="AudioStream" uid="uid://5oesckbeu0b4" path="res://assets/sounds/Main Theme_bip_2.1.ogg" id="2_d624p"]
+
+[node name="Music" type="Node2D"]
+script = ExtResource("1_s8axm")
+
+[node name="TitleMusic" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("1_j56h7")
+volume_db = 1.981
+autoplay = true
+
+[node name="BackgroundMusic" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("2_d624p")

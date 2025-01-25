@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://bp7pr06xwl1xl"
+path="res://.godot/imported/INTRO copia.ogg-b003406d838d3ea396a7aa4aaeca6d93.oggvorbisstr"
+
+[deps]
+
+source_file="res://assets/sounds/INTRO copia.ogg"
+dest_files=["res://.godot/imported/INTRO copia.ogg-b003406d838d3ea396a7aa4aaeca6d93.oggvorbisstr"]
+
+[params]
+
+loop=true
+loop_offset=0.0
+bpm=0.0
+beat_count=0
+bar_beats=4

@@ -21,6 +21,8 @@ Settings="*res://autoload/settings.gd"
 Evetlist="*res://autoload/evetlist.gd"
 Buttontext="*res://autoload/Buttontext.gd"
 Level="*res://autoload/level.gd"
+Music="*res://scenes/music.tscn"
+Global="*res://scripts/Global.gd"
 
 [display]
 
