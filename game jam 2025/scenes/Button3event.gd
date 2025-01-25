@@ -1,8 +1,8 @@
 extends Button
-var id = Evetlist.arrayevents[0]
+var id = Evetlist.arrayevents[2]
 
-@onready var click_hover: AudioStreamPlayer2D = $"../../ClickHover"
 @onready var click_pressed: AudioStreamPlayer2D = $"../../ClickPressed"
+@onready var click_hover: AudioStreamPlayer2D = $"../../ClickHover"
 
 func _ready():
 	print(Evetlist.arrayevents)
@@ -12,10 +12,10 @@ func _on_pressed():
 	print(id)
 	Level.changelevel(id)
 	Evetlist.trigger_event(id)
-	WorldState.eventopen(1)
+	WorldState.eventopen(3)
 
 func _process(delta):
-	if WorldState.event1opened == true:
+	if WorldState.event3opened == true:
 		visible = false
 
 
