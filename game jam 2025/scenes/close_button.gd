@@ -16,7 +16,7 @@ func _process(delta: float) -> void:
 
 func _on_pressed() -> void:
 	click_pressed.play()
-	panel.visible = false
+	Global.et_on = 0
 
 
 func _on_mouse_entered() -> void:
