@@ -1,11 +1,11 @@
 [gd_scene load_steps=4 format=3 uid="uid://dq78whhunnx84"]
 
-[ext_resource type="Script" path="res://scenes/event.gd" id="1_mnp8t"]
+[ext_resource type="Script" path="res://autoload/evetlist.gd" id="1_vex2u"]
 [ext_resource type="Script" path="res://scenes/Buttonoption.gd" id="2_i5oev"]
 [ext_resource type="Script" path="res://autoload/Buttontext.gd" id="3_4duya"]
 
 [node name="Event" type="Node2D"]
-script = ExtResource("1_mnp8t")
+script = ExtResource("1_vex2u")
 
 [node name="Panel" type="Panel" parent="."]
 offset_left = 236.0
@@ -37,5 +37,7 @@ offset_bottom = 103.0
 text = "option 2"
 script = ExtResource("3_4duya")
 
+[connection signal="pressed" from="Panel/Button" to="." method="trigger_option" binds= ["1"]]
 [connection signal="ready" from="Panel/Button" to="Panel/Button" method="getText" binds= ["1"]]
+[connection signal="pressed" from="Panel2/Button" to="." method="trigger_option" binds= ["2"]]
 [connection signal="ready" from="Panel2/Button" to="Panel2/Button" method="getText" binds= ["2"]]

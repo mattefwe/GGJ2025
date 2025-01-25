@@ -21,6 +21,7 @@ Settings="*res://autoload/settings.gd"
 Evetlist="*res://autoload/evetlist.gd"
 Buttontext="*res://autoload/Buttontext.gd"
 Level="*res://autoload/level.gd"
+WorldState="*res://autoload/world_state.gd"
 
 [display]
 
