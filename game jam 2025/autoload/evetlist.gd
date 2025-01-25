@@ -81,5 +81,11 @@ func trigger_event(id):
 	#for x in events[index]["options"]:
 	#	print(x["title"])
 	#	print(x["desc"])
-func trigger_option(eventindex, id):
-	return events[eventindex]["options"][id]["desc"]
+func trigger_option(id):
+	#print(events)
+	#print(events[int(Level.levelid)-1])
+	#print(events[int(Level.levelid)-1]["options"])
+	print(events[int(Level.levelid)-1]["options"][int(id)-1]["world_update"])
+	var options = events[int(Level.levelid)-1]["options"][int(id)-1]["world_update"]
+	for x in options:
+		WorldState.world_update(x,options[x])
