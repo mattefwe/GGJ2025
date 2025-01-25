@@ -1,17 +1,16 @@
-[gd_scene load_steps=14 format=3 uid="uid://bprnke6idswl6"]
+[gd_scene load_steps=15 format=3 uid="uid://cjpr1b3wgqyej"]
 
 [ext_resource type="Script" path="res://scripts/in_game.gd" id="1_6qcy7"]
-[ext_resource type="Texture2D" uid="uid://kn34nwtgnhnt" path="res://assets/disegno_bottoni.png" id="2_0oyud"]
-[ext_resource type="Texture2D" uid="uid://lfwgnuryq8rh" path="res://assets/mondo_normale.png" id="2_oh4uy"]
+[ext_resource type="Texture2D" path="res://assets/disegno_bottoni.png" id="2_0oyud"]
+[ext_resource type="Texture2D" path="res://assets/mondo_normale.png" id="2_oh4uy"]
 [ext_resource type="Script" path="res://scenes/sprite_2d.gd" id="3_46w4r"]
-[ext_resource type="FontFile" uid="uid://dqqcurrqs4ko0" path="res://assets/ByteBounce.ttf" id="4_7g4k8"]
-[ext_resource type="Texture2D" uid="uid://dxro3kskbxknd" path="res://assets/New Piskel (2).png" id="6_3pqcb"]
+[ext_resource type="FontFile" path="res://assets/ByteBounce.ttf" id="4_7g4k8"]
+[ext_resource type="Texture2D" path="res://assets/New Piskel (2).png" id="6_3pqcb"]
+[ext_resource type="PackedScene" uid="uid://l6n5m0a0akos" path="res://scenes/eventselection.tscn" id="7_ilay3"]
 
 [sub_resource type="CanvasTexture" id="CanvasTexture_53o80"]
 
 [sub_resource type="Theme" id="Theme_roxym"]
-
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_mkth5"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_j350d"]
 texture = ExtResource("2_0oyud")
@@ -28,6 +27,8 @@ expand_margin_top = 5.0
 expand_margin_right = 5.0
 expand_margin_bottom = 5.0
 region_rect = Rect2(42, 55, 38, 14)
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_mkth5"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_ratmo"]
 texture = ExtResource("2_0oyud")
@@ -70,10 +71,10 @@ offset_bottom = 167.0
 theme = SubResource("Theme_roxym")
 theme_override_fonts/font = ExtResource("4_7g4k8")
 theme_override_font_sizes/font_size = 48
-theme_override_styles/focus = SubResource("StyleBoxEmpty_mkth5")
+theme_override_styles/normal = SubResource("StyleBoxTexture_j350d")
 theme_override_styles/hover = SubResource("StyleBoxTexture_j350d")
 theme_override_styles/pressed = SubResource("StyleBoxTexture_xpldp")
-theme_override_styles/normal = SubResource("StyleBoxTexture_j350d")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_mkth5")
 text = "Events"
 
 [node name="StatsButton" type="Button" parent="."]
@@ -84,10 +85,10 @@ offset_bottom = -128.0
 theme = SubResource("Theme_roxym")
 theme_override_fonts/font = ExtResource("4_7g4k8")
 theme_override_font_sizes/font_size = 32
-theme_override_styles/focus = SubResource("StyleBoxEmpty_mkth5")
+theme_override_styles/normal = SubResource("StyleBoxTexture_ratmo")
 theme_override_styles/hover = SubResource("StyleBoxTexture_ratmo")
 theme_override_styles/pressed = SubResource("StyleBoxTexture_45u0t")
-theme_override_styles/normal = SubResource("StyleBoxTexture_ratmo")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_mkth5")
 text = "Stats"
 
 [node name="OptButton" type="Button" parent="."]
@@ -98,10 +99,10 @@ offset_bottom = -128.0
 theme = SubResource("Theme_roxym")
 theme_override_fonts/font = ExtResource("4_7g4k8")
 theme_override_font_sizes/font_size = 32
-theme_override_styles/focus = SubResource("StyleBoxEmpty_mkth5")
+theme_override_styles/normal = SubResource("StyleBoxTexture_ratmo")
 theme_override_styles/hover = SubResource("StyleBoxTexture_ratmo")
 theme_override_styles/pressed = SubResource("StyleBoxTexture_45u0t")
-theme_override_styles/normal = SubResource("StyleBoxTexture_ratmo")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_mkth5")
 text = "
 "
 
@@ -125,6 +126,10 @@ offset_top = -59.0
 offset_right = 128.0
 offset_bottom = -19.0
 scale = Vector2(0.80463, 0.730589)
+
+[node name="Node2D" parent="." instance=ExtResource("7_ilay3")]
+position = Vector2(-300, -157)
+scale = Vector2(0.484056, 0.447284)
 
 [node name="EventGridContainer" type="GridContainer" parent="."]
 offset_left = -201.0

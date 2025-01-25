@@ -52,11 +52,20 @@ var events =[
 	},
 ] 
 #var options = []
-
+var arrayevents = []
 # Called when the node enters the scene tree for the first time.
-func _ready():
-	pass # Replace with function body.
+var rng = RandomNumberGenerator.new()
 
+func begin():
+	print("ok")
+	var x = 0
+	while x!=5:
+		x+=1
+		var my_random_number = rng.randi_range(1, 2) # Replace with function body.
+		Evetlist.arrayevents.append(my_random_number)
+		print(Evetlist.arrayevents)
+func _ready():
+	pass
 #var delta_total = 0;
 
 # Called every frame. 'deldeltta' is the elapsed time since the previous frame.
@@ -70,7 +79,7 @@ func trigger_event(id):
 	var index = -1
 	for x in events:
 		index += 1
-		if x["id"] == id:
+		if x["id"] == str(id):
 			#index = index    ### mi trova l'indice dell'evento cercato
 				
 			get_tree().change_scene_to_file("res://scenes/event.tscn")
