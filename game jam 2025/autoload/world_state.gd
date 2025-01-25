@@ -1,7 +1,34 @@
 extends Node
 
-
+var economic_sit = 0
+var climate = 0
+var tech = 0
+var int_stab = 0
+var unrest = 0
+var might = 0
+var bubble_res = 0
+var bubble_akn = 0
+var world_type = 0
 # Called when the node enters the scene tree for the first time.
+
+#############################
+var event1opened = false
+var event2opened = false
+var event3opened = false
+var event4opened = false
+var event5opened = false
+func eventopen(num):
+	if num == 1:
+		event1opened = true
+	elif num == 2:
+		event2opened = true
+	elif num == 3:
+		event3opened = true
+	elif num == 4:
+		event4opened = true
+	elif num == 5:
+		event5opened = true
+
 func _ready():
 	var economic_sit = 0
 	var climate = 0
@@ -17,7 +44,8 @@ func world_update(parameter, change):
 	if parameter == "economic_sit":
 		self.economic_sit += change
 	elif parameter == "climate":
-		self.climate += change
+		WorldState.climate += int(change)
+		print(WorldState.climate)
 	elif parameter == "tech":
 		self.tech += change
 	elif parameter == "int_stab":

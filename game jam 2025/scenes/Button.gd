@@ -10,6 +10,9 @@ func _ready():
 	pass
 func _button_pressed(id):
 	Evetlist.trigger_event(id)
+	hide()
+	print("ciao")
+	
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
@@ -17,4 +20,6 @@ func _process(delta):
 
 
 func _on_button_pressed(id):
-	Evetlist.trigger_event(id) # Replace with function body.
+	Evetlist.trigger_event(id)
+	hide()
+	 # Replace with function body.

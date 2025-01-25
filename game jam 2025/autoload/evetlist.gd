@@ -12,7 +12,7 @@ var events =[
 				"title": "non fare niente",
 				"desc": "stai a guardare",
 				"world_update":{
-					"cimate":-10
+					"climate":-10
 				}
 			},
 			{
@@ -38,7 +38,10 @@ var events =[
 			{
 				"id": "2.1",
 				"title": "wow",
-				"desc": "eccheccazzo"
+				"desc": "eccheccazzo",
+				"world_update":{
+					"climate": -4
+				}
 			},
 			{
 				"id": "2.2",
@@ -85,7 +88,9 @@ func trigger_option(id):
 	#print(events)
 	#print(events[int(Level.levelid)-1])
 	#print(events[int(Level.levelid)-1]["options"])
-	print(events[int(Level.levelid)-1]["options"][int(id)-1]["world_update"])
+	#print(events[int(Level.levelid)-1]["options"][int(id)-1]["world_update"])
 	var options = events[int(Level.levelid)-1]["options"][int(id)-1]["world_update"]
 	for x in options:
+		#print(x, options[x])
 		WorldState.world_update(x,options[x])
+	get_tree().change_scene_to_file("res://scenes/eventselection.tscn")
