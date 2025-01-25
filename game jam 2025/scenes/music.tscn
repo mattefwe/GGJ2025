@@ -7,10 +7,10 @@
 [node name="Music" type="Node2D"]
 script = ExtResource("1_s8axm")
 
+[node name="BackgroundMusic" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("2_d624p")
+
 [node name="TitleMusic" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("1_j56h7")
 volume_db = 5.333
 autoplay = true
-
-[node name="BackgroundMusic" type="AudioStreamPlayer2D" parent="."]
-stream = ExtResource("2_d624p")

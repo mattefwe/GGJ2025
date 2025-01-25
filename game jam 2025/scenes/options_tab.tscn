@@ -1,8 +1,13 @@
-[gd_scene load_steps=8 format=3 uid="uid://dg1sjsldykkju"]
+[gd_scene load_steps=14 format=3 uid="uid://dg1sjsldykkju"]
 
 [ext_resource type="Texture2D" uid="uid://c6qo5lew58v7u" path="res://assets/menu box 2.png" id="1_4l6k0"]
+[ext_resource type="Script" path="res://scenes/options_tab.gd" id="1_yf5ft"]
 [ext_resource type="FontFile" uid="uid://dqqcurrqs4ko0" path="res://assets/ByteBounce.ttf" id="2_1le45"]
 [ext_resource type="Texture2D" uid="uid://kn34nwtgnhnt" path="res://assets/disegno_bottoni.png" id="3_ttolh"]
+[ext_resource type="Script" path="res://scenes/main_menu_button.gd" id="4_tdanc"]
+[ext_resource type="Script" path="res://scenes/cancel_button.gd" id="5_0cdl1"]
+[ext_resource type="AudioStream" uid="uid://dc67a6nmf8rgw" path="res://assets/sounds/CLICK 2.wav" id="6_f847h"]
+[ext_resource type="AudioStream" uid="uid://cj8yo1sugspj4" path="res://assets/sounds/CLICK 1.wav" id="7_halce"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_pb5lo"]
 texture = ExtResource("1_4l6k0")
@@ -14,13 +19,13 @@ region_rect = Rect2(9, 5, 16, 16)
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_pcerb"]
 
-[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_s7reb"]
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_m2m5u"]
 texture = ExtResource("3_ttolh")
 expand_margin_left = 5.0
 expand_margin_top = 5.0
 expand_margin_right = 5.0
 expand_margin_bottom = 5.0
-region_rect = Rect2(1, 85, 38, 14)
+region_rect = Rect2(42, 85, 38, 14)
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_17euk"]
 texture = ExtResource("3_ttolh")
@@ -30,6 +35,14 @@ expand_margin_right = 5.0
 expand_margin_bottom = 5.0
 region_rect = Rect2(42, 55, 38, 14)
 
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_s7reb"]
+texture = ExtResource("3_ttolh")
+expand_margin_left = 5.0
+expand_margin_top = 5.0
+expand_margin_right = 5.0
+expand_margin_bottom = 5.0
+region_rect = Rect2(1, 85, 38, 14)
+
 [node name="options_tab" type="Control"]
 layout_mode = 3
 anchors_preset = 15
@@ -37,35 +50,64 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_yf5ft")
 
 [node name="Panel" type="Panel" parent="."]
 layout_mode = 0
-offset_left = 192.0
-offset_top = 64.0
-offset_right = 960.0
-offset_bottom = 576.0
+offset_left = 419.0
+offset_top = 244.0
+offset_right = 733.0
+offset_bottom = 364.0
 theme_override_styles/panel = SubResource("StyleBoxTexture_pb5lo")
 
-[node name="PlayButton" type="Button" parent="Panel"]
+[node name="MainMenuButton" type="Button" parent="Panel"]
 layout_mode = 0
-offset_left = 71.0
-offset_top = 386.0
-offset_right = 258.0
-offset_bottom = 441.0
+offset_left = 17.0
+offset_top = 69.0
+offset_right = 139.0
+offset_bottom = 104.0
 theme_override_fonts/font = ExtResource("2_1le45")
-theme_override_font_sizes/font_size = 80
+theme_override_font_sizes/font_size = 32
+theme_override_styles/focus = SubResource("StyleBoxEmpty_pcerb")
+theme_override_styles/hover = SubResource("StyleBoxTexture_m2m5u")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_17euk")
+theme_override_styles/normal = SubResource("StyleBoxTexture_m2m5u")
+text = "Main Menu"
+script = ExtResource("4_tdanc")
+
+[node name="CancelButton" type="Button" parent="Panel"]
+layout_mode = 0
+offset_left = 169.0
+offset_top = 68.0
+offset_right = 291.0
+offset_bottom = 104.0
+theme_override_fonts/font = ExtResource("2_1le45")
+theme_override_font_sizes/font_size = 32
 theme_override_styles/focus = SubResource("StyleBoxEmpty_pcerb")
 theme_override_styles/hover = SubResource("StyleBoxTexture_s7reb")
 theme_override_styles/pressed = SubResource("StyleBoxTexture_17euk")
 theme_override_styles/normal = SubResource("StyleBoxTexture_s7reb")
-text = "Play"
+text = "Cancel
+"
+script = ExtResource("5_0cdl1")
 
 [node name="Label" type="Label" parent="Panel"]
 layout_mode = 0
-offset_left = 24.0
-offset_top = 16.0
-offset_right = 204.0
-offset_bottom = 64.0
+offset_left = 16.0
+offset_top = 17.0
+offset_right = 108.0
+offset_bottom = 42.0
 theme_override_fonts/font = ExtResource("2_1le45")
-theme_override_font_sizes/font_size = 64
+theme_override_font_sizes/font_size = 32
 text = "Volume:"
+
+[node name="ClickPressed" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("6_f847h")
+
+[node name="ClickHover" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("7_halce")
+
+[connection signal="mouse_entered" from="Panel/MainMenuButton" to="Panel/MainMenuButton" method="_on_mouse_entered"]
+[connection signal="pressed" from="Panel/MainMenuButton" to="Panel/MainMenuButton" method="_on_pressed"]
+[connection signal="mouse_entered" from="Panel/CancelButton" to="Panel/CancelButton" method="_on_mouse_entered"]
+[connection signal="pressed" from="Panel/CancelButton" to="Panel/CancelButton" method="_on_pressed"]
