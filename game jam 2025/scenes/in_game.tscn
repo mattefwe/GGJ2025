@@ -71,13 +71,13 @@ texture = ExtResource("3_b728c")
 [node name="World" type="Sprite2D" parent="."]
 position = Vector2(0.670166, -7)
 rotation = 3.14159
-scale = Vector2(2.81964, -2.76652)
+scale = Vector2(2.78491, -2.73245)
 texture = ExtResource("2_oh4uy")
 script = ExtResource("3_46w4r")
 
 [node name="Bubble" type="Sprite2D" parent="."]
 position = Vector2(-1, -8)
-scale = Vector2(2.1625, 2.1625)
+scale = Vector2(2.3, 2.3)
 texture = ExtResource("6_n7qgh")
 
 [node name="Events" type="Button" parent="."]
@@ -137,21 +137,23 @@ region_rect = Rect2(9, 6, 16, 16)
 zoom = Vector2(1.7, 1.7)
 
 [node name="HBoxContainer" type="HBoxContainer" parent="."]
-offset_right = 40.0
-offset_bottom = 40.0
+offset_left = 569.0
+offset_top = 13.0
+offset_right = 609.0
+offset_bottom = 53.0
 
 [node name="GridContainer" type="GridContainer" parent="."]
-offset_left = 88.0
-offset_top = -59.0
-offset_right = 128.0
-offset_bottom = -19.0
+offset_left = 657.0
+offset_top = -46.0
+offset_right = 697.0
+offset_bottom = -6.0
 scale = Vector2(0.80463, 0.730589)
 
 [node name="EventGridContainer" type="GridContainer" parent="."]
-offset_left = -201.0
-offset_top = -168.0
-offset_right = -161.0
-offset_bottom = -128.0
+offset_left = 368.0
+offset_top = -155.0
+offset_right = 408.0
+offset_bottom = -115.0
 
 [node name="EventTab" parent="." instance=ExtResource("7_ndav0")]
 visible = false

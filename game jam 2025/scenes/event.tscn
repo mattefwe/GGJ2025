@@ -70,6 +70,7 @@ offset_top = 54.0
 offset_right = 119.0
 offset_bottom = 77.0
 scale = Vector2(24.7504, 8.06104)
+text = "diocane"
 script = ExtResource("6_26s6n")
 
 [connection signal="pressed" from="Panel/Button" to="Panel/Button" method="_on_pressed"]
