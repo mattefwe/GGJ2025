@@ -781,7 +781,8 @@ var arrayevents = []
 var rng = RandomNumberGenerator.new()
 
 func begin():
-	print("ok")
+	#print("ok")
+	Evetlist.arrayevents = []
 	var x = 0
 	while x!=5:
 		x+=1
