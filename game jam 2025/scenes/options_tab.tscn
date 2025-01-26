@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=3 uid="uid://dg1sjsldykkju"]
+[gd_scene load_steps=15 format=3 uid="uid://dg1sjsldykkju"]
 
 [ext_resource type="Texture2D" uid="uid://c6qo5lew58v7u" path="res://assets/menu box 2.png" id="1_4l6k0"]
 [ext_resource type="Script" path="res://scenes/options_tab.gd" id="1_yf5ft"]
@@ -8,6 +8,7 @@
 [ext_resource type="Script" path="res://scenes/cancel_button.gd" id="5_0cdl1"]
 [ext_resource type="AudioStream" uid="uid://dc67a6nmf8rgw" path="res://assets/sounds/CLICK 2.wav" id="6_f847h"]
 [ext_resource type="AudioStream" uid="uid://cj8yo1sugspj4" path="res://assets/sounds/CLICK 1.wav" id="7_halce"]
+[ext_resource type="Script" path="res://scenes/volume_slider.gd" id="7_tcv8s"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_pb5lo"]
 texture = ExtResource("1_4l6k0")
@@ -101,6 +102,17 @@ theme_override_fonts/font = ExtResource("2_1le45")
 theme_override_font_sizes/font_size = 32
 text = "Volume:"
 
+[node name="HSlider" type="HSlider" parent="Panel"]
+layout_mode = 0
+offset_left = 117.0
+offset_top = 15.0
+offset_right = 295.0
+offset_bottom = 45.0
+min_value = -30.0
+max_value = 0.0
+value = -28.0
+script = ExtResource("7_tcv8s")
+
 [node name="ClickPressed" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("6_f847h")
 
@@ -111,3 +123,4 @@ stream = ExtResource("7_halce")
 [connection signal="pressed" from="Panel/MainMenuButton" to="Panel/MainMenuButton" method="_on_pressed"]
 [connection signal="mouse_entered" from="Panel/CancelButton" to="Panel/CancelButton" method="_on_mouse_entered"]
 [connection signal="pressed" from="Panel/CancelButton" to="Panel/CancelButton" method="_on_pressed"]
+[connection signal="value_changed" from="Panel/HSlider" to="Panel/HSlider" method="_on_value_changed"]
