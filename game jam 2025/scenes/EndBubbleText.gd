@@ -103,4 +103,3 @@ func getText():
 	print(text)
 	#print("testo:"+EndBubbleText.text)
 #controlla che anche gli estremi abbiano un'assegnazione del valore
-

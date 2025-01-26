@@ -169,77 +169,102 @@ position = Vector2(-2, -8)
 stream = ExtResource("15_p4m3v")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-position = Vector2(-373, -75)
+position = Vector2(-360, -72)
 rotation = 1.5701
 scale = Vector2(2.99167, 2.99167)
 texture = ExtResource("17_3w7n6")
 flip_v = true
 
 [node name="Label" type="Label" parent="."]
-offset_left = -330.0
-offset_top = -177.0
-offset_right = -290.0
-offset_bottom = -154.0
+offset_left = -328.0
+offset_top = -184.0
+offset_right = -288.0
+offset_bottom = -161.0
+theme_override_fonts/font = ExtResource("4_7g4k8")
+theme_override_font_sizes/font_size = 32
 text = "1"
+autowrap_mode = 2
 script = ExtResource("17_ubylh")
 
 [node name="Label2" type="Label" parent="."]
-offset_left = -330.0
-offset_top = -146.0
-offset_right = -290.0
-offset_bottom = -123.0
+offset_left = -328.0
+offset_top = -152.0
+offset_right = -288.0
+offset_bottom = -129.0
+theme_override_fonts/font = ExtResource("4_7g4k8")
+theme_override_font_sizes/font_size = 32
 text = "2"
+autowrap_mode = 2
 script = ExtResource("18_blcnb")
 
 [node name="Label3" type="Label" parent="."]
-offset_left = -330.0
-offset_top = -117.0
-offset_right = -290.0
-offset_bottom = -94.0
+offset_left = -328.0
+offset_top = -120.0
+offset_right = -288.0
+offset_bottom = -97.0
+theme_override_fonts/font = ExtResource("4_7g4k8")
+theme_override_font_sizes/font_size = 32
 text = "3"
+autowrap_mode = 2
 script = ExtResource("19_5yiuc")
 
 [node name="Label4" type="Label" parent="."]
-offset_left = -331.0
-offset_top = -86.0
-offset_right = -291.0
-offset_bottom = -63.0
+offset_left = -328.0
+offset_top = -72.0
+offset_right = -288.0
+offset_bottom = -49.0
+theme_override_fonts/font = ExtResource("4_7g4k8")
+theme_override_font_sizes/font_size = 32
 text = "4"
+autowrap_mode = 2
 script = ExtResource("20_mvu1i")
 
 [node name="Label5" type="Label" parent="."]
-offset_left = -330.0
-offset_top = -58.0
-offset_right = -290.0
-offset_bottom = -35.0
+offset_left = -328.0
+offset_top = 16.0
+offset_right = -288.0
+offset_bottom = 39.0
+theme_override_fonts/font = ExtResource("4_7g4k8")
+theme_override_font_sizes/font_size = 32
 text = "5"
+autowrap_mode = 2
 script = ExtResource("21_c2xt8")
 
 [node name="Label6" type="Label" parent="."]
-offset_left = -331.0
-offset_top = -29.0
-offset_right = -291.0
-offset_bottom = -6.0
+offset_left = -328.0
+offset_top = -40.0
+offset_right = -288.0
+offset_bottom = -17.0
+theme_override_fonts/font = ExtResource("4_7g4k8")
+theme_override_font_sizes/font_size = 32
 text = "6"
+autowrap_mode = 2
 script = ExtResource("22_151js")
 
 [node name="Label7" type="Label" parent="."]
-offset_left = -331.0
-offset_top = 6.0
-offset_right = -291.0
-offset_bottom = 29.0
+offset_left = -328.0
+offset_top = 72.0
+offset_right = -288.0
+offset_bottom = 95.0
+theme_override_fonts/font = ExtResource("4_7g4k8")
+theme_override_font_sizes/font_size = 32
 text = "7"
+autowrap_mode = 2
 script = ExtResource("23_65p2o")
 
 [node name="Label8" type="Label" parent="."]
-offset_left = -330.0
-offset_top = 38.0
-offset_right = -290.0
-offset_bottom = 61.0
+offset_left = -328.0
+offset_top = 128.0
+offset_right = -288.0
+offset_bottom = 151.0
+theme_override_fonts/font = ExtResource("4_7g4k8")
+theme_override_font_sizes/font_size = 32
 text = "8"
+autowrap_mode = 2
 script = ExtResource("24_y8lp3")
 
 [node name="EventTab" parent="." instance=ExtResource("7_ndav0")]
+visible = false
 offset_left = -580.0
 offset_top = -310.0
 offset_right = -580.0
