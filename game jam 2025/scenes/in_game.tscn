@@ -1,4 +1,4 @@
-[gd_scene load_steps=24 format=3 uid="uid://cjpr1b3wgqyej"]
+[gd_scene load_steps=32 format=3 uid="uid://cjpr1b3wgqyej"]
 
 [ext_resource type="Script" path="res://scripts/in_game.gd" id="1_6qcy7"]
 [ext_resource type="Texture2D" uid="uid://kn34nwtgnhnt" path="res://assets/disegno_bottoni.png" id="2_0oyud"]
@@ -16,6 +16,14 @@
 [ext_resource type="AudioStream" uid="uid://dc67a6nmf8rgw" path="res://assets/sounds/CLICK 2.wav" id="9_fcm2l"]
 [ext_resource type="AudioStream" uid="uid://cj8yo1sugspj4" path="res://assets/sounds/CLICK 1.wav" id="10_wqamb"]
 [ext_resource type="PackedScene" uid="uid://dg1sjsldykkju" path="res://scenes/options_tab.tscn" id="13_7x8iu"]
+[ext_resource type="Script" path="res://scenes/statisticlabel1.gd" id="17_ubylh"]
+[ext_resource type="Script" path="res://scenes/statisticlabel2.gd" id="18_blcnb"]
+[ext_resource type="Script" path="res://scenes/statisticlabel3.gd" id="19_5yiuc"]
+[ext_resource type="Script" path="res://scenes/statisticlabel4.gd" id="20_mvu1i"]
+[ext_resource type="Script" path="res://scenes/statisticlabel5.gd" id="21_c2xt8"]
+[ext_resource type="Script" path="res://scenes/statisticlabel6.gd" id="22_151js"]
+[ext_resource type="Script" path="res://scenes/statisticlabel7.gd" id="23_65p2o"]
+[ext_resource type="Script" path="res://scenes/statisticlabel8.gd" id="24_y8lp3"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_jfs7w"]
 shader = ExtResource("2_53kok")
@@ -175,6 +183,62 @@ offset_left = -573.0
 offset_top = -303.0
 offset_right = -573.0
 offset_bottom = -303.0
+
+[node name="Label" type="Label" parent="."]
+offset_left = -317.0
+offset_top = -173.0
+offset_right = -277.0
+offset_bottom = -150.0
+script = ExtResource("17_ubylh")
+
+[node name="Label2" type="Label" parent="."]
+offset_left = -314.0
+offset_top = -139.0
+offset_right = -274.0
+offset_bottom = -116.0
+script = ExtResource("18_blcnb")
+
+[node name="Label3" type="Label" parent="."]
+offset_left = -312.0
+offset_top = -94.0
+offset_right = -272.0
+offset_bottom = -71.0
+script = ExtResource("19_5yiuc")
+
+[node name="Label4" type="Label" parent="."]
+offset_left = -312.0
+offset_top = -57.0
+offset_right = -272.0
+offset_bottom = -34.0
+script = ExtResource("20_mvu1i")
+
+[node name="Label5" type="Label" parent="."]
+offset_left = -312.0
+offset_top = -9.0
+offset_right = -272.0
+offset_bottom = 14.0
+script = ExtResource("21_c2xt8")
+
+[node name="Label6" type="Label" parent="."]
+offset_left = -301.0
+offset_top = 46.0
+offset_right = -261.0
+offset_bottom = 69.0
+script = ExtResource("22_151js")
+
+[node name="Label7" type="Label" parent="."]
+offset_left = -305.0
+offset_top = 107.0
+offset_right = -265.0
+offset_bottom = 130.0
+script = ExtResource("23_65p2o")
+
+[node name="Label8" type="Label" parent="."]
+offset_left = -305.0
+offset_top = 137.0
+offset_right = -265.0
+offset_bottom = 160.0
+script = ExtResource("24_y8lp3")
 
 [connection signal="mouse_entered" from="Events" to="Events" method="_on_mouse_entered"]
 [connection signal="pressed" from="Events" to="." method="_on_events_pressed"]
