@@ -52,7 +52,7 @@ func getText():
 	if int_stab < 4 and int_stab > -1:
 		text += "\nYour bubble's nations are happily at peace"
 	if int_stab > 3:
-		text += "\nYour bubble looks like a heaven on earth"
+		text += "\nYour bubble looks like a heaven on earth international stability wise"
 	###
 	if might < 2 :
 		text += "\nYour bubble has a low might so its power is not high"
