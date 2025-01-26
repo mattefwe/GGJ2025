@@ -87,7 +87,7 @@ func getText():
 		text += "\nYour bubble's economy is in shambles and it's in complete crisis"
 	if economic_sit < 0 and economic_sit > -4:
 		text += "\nYour bubble's economy is going down but it's not in shambles yet"
-	if economic_sit < 3 and economic_sit > 0:
+	if economic_sit < 3 and economic_sit > -1:
 		text += "\nYour bubble's economy is going up but it's not flourishing yet"
 	if economic_sit > 2:
 		text += "\nYour bubble's economy is flourishing"
