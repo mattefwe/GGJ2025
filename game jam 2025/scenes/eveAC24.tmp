@@ -56,10 +56,10 @@ autowrap_mode = 2
 script = ExtResource("6_26s6n")
 
 [node name="Button" type="Button" parent="."]
-offset_left = 120.0
-offset_top = 256.0
-offset_right = 280.0
-offset_bottom = 320.0
+offset_left = 128.0
+offset_top = 448.0
+offset_right = 288.0
+offset_bottom = 512.0
 theme_override_fonts/font = ExtResource("2_swi80")
 theme_override_font_sizes/font_size = 64
 theme_override_styles/normal = SubResource("StyleBoxTexture_321cx")
@@ -71,10 +71,10 @@ text = "Opt 1
 script = ExtResource("3_q2w8h")
 
 [node name="Button2" type="Button" parent="."]
-offset_left = 120.0
-offset_top = 352.0
-offset_right = 280.0
-offset_bottom = 418.0
+offset_left = 704.0
+offset_top = 448.0
+offset_right = 864.0
+offset_bottom = 514.0
 theme_override_fonts/font = ExtResource("2_swi80")
 theme_override_font_sizes/font_size = 64
 theme_override_styles/normal = SubResource("StyleBoxTexture_321cx")
@@ -85,10 +85,10 @@ text = "Opt 2"
 script = ExtResource("3_5g86p")
 
 [node name="Button3" type="Button" parent="."]
-offset_left = 120.0
-offset_top = 456.0
-offset_right = 280.0
-offset_bottom = 520.0
+offset_left = 128.0
+offset_top = 552.0
+offset_right = 288.0
+offset_bottom = 616.0
 theme_override_fonts/font = ExtResource("2_swi80")
 theme_override_font_sizes/font_size = 64
 theme_override_styles/normal = SubResource("StyleBoxTexture_321cx")
@@ -99,10 +99,10 @@ text = "Opt 3"
 script = ExtResource("4_js6os")
 
 [node name="Button4" type="Button" parent="."]
-offset_left = 120.0
-offset_top = 568.0
-offset_right = 280.0
-offset_bottom = 634.0
+offset_left = 704.0
+offset_top = 552.0
+offset_right = 864.0
+offset_bottom = 618.0
 theme_override_fonts/font = ExtResource("2_swi80")
 theme_override_font_sizes/font_size = 64
 theme_override_styles/normal = SubResource("StyleBoxTexture_321cx")

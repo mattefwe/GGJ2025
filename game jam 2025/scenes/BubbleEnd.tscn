@@ -32,7 +32,7 @@ offset_top = 503.0
 offset_right = 526.0
 offset_bottom = 526.0
 scale = Vector2(3.87108, 3.32476)
-text = "Ok"
+text = "Next Bubble"
 
 [node name="Button" type="Button" parent="Label3"]
 layout_mode = 0

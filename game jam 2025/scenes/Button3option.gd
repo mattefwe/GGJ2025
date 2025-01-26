@@ -6,9 +6,10 @@ extends Button
 func getText():
 	var eventid = Level.levelid
 	#print("size:",Evetlist.events[int(eventid)-1]["options"].size())
-	if Evetlist.events[int(eventid)-1]["options"].size() > 2:
+	if Evetlist.events[int(eventid)]["options"].size() > 2:
 		#print("ok")
-		text = Evetlist.events[int(eventid)-1]["options"][2]["title"]
+		print("array:"+str(Evetlist.events[int(eventid)]["options"]))
+		text = Evetlist.events[int(eventid)]["options"][2]["title"]
 		print(text)
 		set_text(text)
 	else:
