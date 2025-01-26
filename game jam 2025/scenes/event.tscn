@@ -17,8 +17,6 @@ shader_parameter/height = 0.8
 shader_parameter/frequency = 2.0
 shader_parameter/speed = 0.5
 
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_r8ox6"]
-
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_321cx"]
 texture = ExtResource("4_vet0k")
 expand_margin_left = 5.0
@@ -34,6 +32,8 @@ expand_margin_top = 5.0
 expand_margin_right = 5.0
 expand_margin_bottom = 5.0
 region_rect = Rect2(42, 55, 38, 14)
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_r8ox6"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_klhf7"]
 
@@ -61,10 +61,10 @@ offset_right = 288.0
 offset_bottom = 512.0
 theme_override_fonts/font = ExtResource("2_swi80")
 theme_override_font_sizes/font_size = 64
-theme_override_styles/focus = SubResource("StyleBoxEmpty_r8ox6")
+theme_override_styles/normal = SubResource("StyleBoxTexture_321cx")
 theme_override_styles/hover = SubResource("StyleBoxTexture_321cx")
 theme_override_styles/pressed = SubResource("StyleBoxTexture_rnvmd")
-theme_override_styles/normal = SubResource("StyleBoxTexture_321cx")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_r8ox6")
 text = "Opt 1
 "
 script = ExtResource("3_q2w8h")
@@ -76,10 +76,10 @@ offset_right = 864.0
 offset_bottom = 514.0
 theme_override_fonts/font = ExtResource("2_swi80")
 theme_override_font_sizes/font_size = 64
-theme_override_styles/focus = SubResource("StyleBoxEmpty_klhf7")
+theme_override_styles/normal = SubResource("StyleBoxTexture_321cx")
 theme_override_styles/hover = SubResource("StyleBoxTexture_321cx")
 theme_override_styles/pressed = SubResource("StyleBoxTexture_rnvmd")
-theme_override_styles/normal = SubResource("StyleBoxTexture_321cx")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_klhf7")
 text = "Opt 2"
 script = ExtResource("3_5g86p")
 
@@ -90,10 +90,10 @@ offset_right = 288.0
 offset_bottom = 616.0
 theme_override_fonts/font = ExtResource("2_swi80")
 theme_override_font_sizes/font_size = 64
-theme_override_styles/focus = SubResource("StyleBoxEmpty_qnxnt")
+theme_override_styles/normal = SubResource("StyleBoxTexture_321cx")
 theme_override_styles/hover = SubResource("StyleBoxTexture_321cx")
 theme_override_styles/pressed = SubResource("StyleBoxTexture_rnvmd")
-theme_override_styles/normal = SubResource("StyleBoxTexture_321cx")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_qnxnt")
 text = "Opt 3"
 script = ExtResource("4_js6os")
 
@@ -104,10 +104,10 @@ offset_right = 864.0
 offset_bottom = 618.0
 theme_override_fonts/font = ExtResource("2_swi80")
 theme_override_font_sizes/font_size = 64
-theme_override_styles/focus = SubResource("StyleBoxEmpty_rhr74")
+theme_override_styles/normal = SubResource("StyleBoxTexture_321cx")
 theme_override_styles/hover = SubResource("StyleBoxTexture_321cx")
 theme_override_styles/pressed = SubResource("StyleBoxTexture_rnvmd")
-theme_override_styles/normal = SubResource("StyleBoxTexture_321cx")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_rhr74")
 text = "Opt 4"
 script = ExtResource("5_sm6kb")
 

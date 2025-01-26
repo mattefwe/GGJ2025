@@ -805,7 +805,7 @@ func begin():
 	var x = 0
 	while x!=5:
 		x+=1
-		var my_random_number = rng.randi_range(1, 22) # Replace with function body.
+		var my_random_number = rng.randi_range(0, 21) # Replace with function body.
 		Evetlist.arrayevents.append(my_random_number)
 		print(Evetlist.arrayevents)
 func _ready():

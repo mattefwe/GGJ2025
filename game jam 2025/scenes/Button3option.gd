@@ -11,6 +11,8 @@ func getText():
 		text = Evetlist.events[int(eventid)-1]["options"][2]["title"]
 		print(text)
 		set_text(text)
+	else:
+		visible = false
 
 func _on_pressed():
 	click_pressed.play()
