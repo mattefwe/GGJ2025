@@ -84,7 +84,6 @@ theme_override_styles/normal = SubResource("StyleBoxTexture_uvye1")
 theme_override_styles/hover = SubResource("StyleBoxTexture_uvye1")
 theme_override_styles/pressed = SubResource("StyleBoxTexture_0af1l")
 theme_override_styles/focus = SubResource("StyleBoxEmpty_ng2fn")
-text = "event1"
 script = ExtResource("4_q3dog")
 
 [node name="TextureRect" type="TextureRect" parent="Button1"]
@@ -107,7 +106,6 @@ theme_override_styles/normal = SubResource("StyleBoxTexture_uvye1")
 theme_override_styles/hover = SubResource("StyleBoxTexture_uvye1")
 theme_override_styles/pressed = SubResource("StyleBoxTexture_0af1l")
 theme_override_styles/focus = SubResource("StyleBoxEmpty_1jtvc")
-text = "event2"
 script = ExtResource("5_qv0yy")
 
 [node name="TextureRect" type="TextureRect" parent="Button2"]
@@ -130,7 +128,6 @@ theme_override_styles/normal = SubResource("StyleBoxTexture_uvye1")
 theme_override_styles/hover = SubResource("StyleBoxTexture_uvye1")
 theme_override_styles/pressed = SubResource("StyleBoxTexture_0af1l")
 theme_override_styles/focus = SubResource("StyleBoxEmpty_hb4lm")
-text = "event3"
 script = ExtResource("6_o86is")
 
 [node name="TextureRect" type="TextureRect" parent="Button3"]
@@ -153,7 +150,6 @@ theme_override_styles/normal = SubResource("StyleBoxTexture_uvye1")
 theme_override_styles/hover = SubResource("StyleBoxTexture_uvye1")
 theme_override_styles/pressed = SubResource("StyleBoxTexture_0af1l")
 theme_override_styles/focus = SubResource("StyleBoxEmpty_grppt")
-text = "event4"
 script = ExtResource("7_o8tew")
 
 [node name="TextureRect" type="TextureRect" parent="Button4"]
@@ -176,7 +172,6 @@ theme_override_styles/normal = SubResource("StyleBoxTexture_uvye1")
 theme_override_styles/hover = SubResource("StyleBoxTexture_uvye1")
 theme_override_styles/pressed = SubResource("StyleBoxTexture_0af1l")
 theme_override_styles/focus = SubResource("StyleBoxEmpty_yxdqc")
-text = "event5"
 script = ExtResource("8_w4ah8")
 
 [node name="TextureRect" type="TextureRect" parent="Button5"]

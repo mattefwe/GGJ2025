@@ -130,6 +130,7 @@ var events =[
 	{
 		#random or flood
 		"id" : "5",
+		"icon": "res://assets/Frost.png",
 		"sphere":"climate",
 		"title" : "Frost",
 		"desc" : "The temperature is so cold that everything starts freezing",
@@ -157,6 +158,7 @@ var events =[
 	},
 	{
 		"id" : "6",
+		"icon":"res://assets/Tornado.png",
 		"sphere":"climate",
 		"title" : "Climate crisis",
 		"desc" : "The planet is in a climate crisis",
@@ -193,6 +195,7 @@ var events =[
 	},
 	{
 		"id" : "7",
+		"icon":"res://assets/Discovery.png",
 		"sphere":"technology",
 		"title" : "New discovery",
 		"desc" : "A new scientist has discovered a new technological advancement",
@@ -221,6 +224,7 @@ var events =[
 	},
 	{
 		"id" : "8",
+		"icon":"res://assets/Document_Loss.png",
 		"sphere":"technology",
 		"title" : "Loss of important documents",
 		"desc" : "Some important scientific papers have gotten lost",
@@ -258,6 +262,7 @@ var events =[
 	},
 	{
 		"id" : "9",
+		"icon":"res://assets/War.png",
 		"sphere":"international_stability",
 		"title" : "War",
 		"desc" : "",
@@ -306,6 +311,7 @@ var events =[
 	},
 	{
 		"id" : "10",
+		"icon":"res://assets/International_agreement.png",
 		"sphere":"internationa_stability",
 		"title" : "International agreement",
 		"desc" : "Two nations have decide to sign an international agreement",
@@ -342,6 +348,7 @@ var events =[
 	{
 		#unrest > 8
 		"id" : "11",
+		"icon":"res://assets/War.png",
 		"sphere":"social_climate",
 		"title" : "Social crisis",
 		"desc" : "The world has gone downhill and now is facing a crisis",
@@ -383,6 +390,7 @@ var events =[
 		#Qualche politico fa uno slip-up
 
 		"id" : "12",
+		"icon":"res://assets/UFO.png",
 		"sphere":"social_climate",
 		"title" : "Conspiracy theorists",
 		"desc" : "A group of people has chosen to not believe what they're told and to invent what they want to hear",
@@ -418,6 +426,7 @@ var events =[
 	},
 	{
 		"id" : "13",
+		"icon":"res://assets/War.png",
 		"sphere":"social_climate",
 		"title" : "Revolution",
 		"desc" : "The people have decided to revolt against the government",
@@ -456,6 +465,7 @@ var events =[
 	},
 	{
 		"id" : "14",
+		"icon":"res://assets/War.png",
 		"sphere":"social_climate",
 		"title" : "Strikes",
 		"desc" : "The workers have started going on strikes",
@@ -482,6 +492,7 @@ var events =[
 	},
 	{
 		"id" : "15",
+		"icon":"res://assets/War.png",
 		"sphere":"social_climate",
 		"title" : "Coup",
 		"desc" : "The population has staged a coup against the government",
@@ -517,6 +528,7 @@ var events =[
 	},
 	{
 		"id" : "16",
+		"icon":"res://assets/Document_Loss.png",
 		"sphere":"bubble_awarness",
 		"title" : "A politician had a little slip-up",
 		"desc" : "While talking to the public a politician has said something about an outside bubble that traps everyone inside",
@@ -555,6 +567,7 @@ var events =[
 	},
 	{
 		"id" : "17",
+		"icon":"res://assets/Drought.png",
 		"sphere":"power",
 		"title" : "Mass immigration",
 		"desc" : "A lot of people have deemed their part of the world not livable so they started to move away from it and they started reaching anouther one",
@@ -593,6 +606,7 @@ var events =[
 		},
 	{
 		"id" : "18",
+		"icon":"res://assets/Rocket.png",
 		"sphere":"bubble_awarness",
 		"title" : "A researcher's theory",
 		"desc" : "A researcher has theorized that outside your planet there might be something else",
@@ -629,6 +643,7 @@ var events =[
 	{
 		#economic_sit < 0
 		"id" : "19",
+		"icon":"res://assets/Inflation.png",
 		"sphere":"economy",
 		"title" : "Inflation",
 		"desc" : "In the world inflation has started going up",
@@ -673,6 +688,7 @@ var events =[
 	},
 	{
 		"id" : "20",
+		"icon":"res://assets/War.png",
 		"sphere":"power",
 		"title" : "Soldiers enlisted",
 		"desc" : "A huge group of young adults has chosen to enlist in the army",
@@ -711,6 +727,7 @@ var events =[
 	},
 	{
 		"id" : "21",
+		"icon":"res://assets/War.png",
 		"sphere":"power",
 		"title" : "Soldiers defected",
 		"desc" : "A group of soldiers chose to put down their weapons and to leave the army",
@@ -746,6 +763,7 @@ var events =[
 	},
 	{
 		"id" : "22",
+		"icon":"res://assets/Drought.png",
 		"sphere":"power",
 		"title" : "Mass emigration",
 		"desc" : "A huge group of people has started going away from their home country",
@@ -787,7 +805,7 @@ func begin():
 	var x = 0
 	while x!=5:
 		x+=1
-		var my_random_number = rng.randi_range(1, 4) # Replace with function body.
+		var my_random_number = rng.randi_range(0, 21) # Replace with function body.
 		Evetlist.arrayevents.append(my_random_number)
 		print(Evetlist.arrayevents)
 func _ready():
