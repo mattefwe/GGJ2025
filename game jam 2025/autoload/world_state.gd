@@ -74,10 +74,14 @@ func _process(delta):
 	pass
 	
 func bubblecompleted():
-	WorldState.bubbles_completed += 1
-	WorldState.event1opened = false
-	WorldState.event2opened = false
-	WorldState.event3opened = false
-	WorldState.event4opened = false
-	WorldState.event5opened = false
-	Evetlist.begin()
+	if WorldState.bubbles_completed == 4:
+		get_tree().change_scene_to_file("res://scenes/trueend.tscn")
+	else:
+		get_tree().change_scene_to_file("res://scenes/in_game.tscn")
+		WorldState.bubbles_completed += 1
+		WorldState.event1opened = false
+		WorldState.event2opened = false
+		WorldState.event3opened = false
+		WorldState.event4opened = false
+		WorldState.event5opened = false
+		Evetlist.begin()
