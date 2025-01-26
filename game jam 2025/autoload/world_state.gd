@@ -47,6 +47,19 @@ func _ready():
 	var bubble_res = rng.randi_range(0,5)
 	var bubble_akn = rng.randi_range(0,20)
 	var world_type = 0
+func begin():
+	var rng = RandomNumberGenerator.new()
+#var my_random_number = rng.randi_range(1, 4)
+
+	WorldState.economic_sit = rng.randi_range(-5,5)
+	WorldState.climate = rng.randi_range(-10,40)
+	WorldState.tech = rng.randi_range(0,10)
+	WorldState.int_stab = rng.randi_range(-7,7)
+	WorldState.unrest = rng.randi_range(0,10)
+	WorldState.might = rng.randi_range(0,10)
+	WorldState.bubble_res = rng.randi_range(0,5)
+	WorldState.bubble_akn = rng.randi_range(0,20)
+	WorldState.world_type = 0
 
 func world_update(parameter, change):
 	if parameter == "economic_sit":
@@ -84,4 +97,5 @@ func bubblecompleted():
 		WorldState.event3opened = false
 		WorldState.event4opened = false
 		WorldState.event5opened = false
+		WorldState.begin()
 		Evetlist.begin()
