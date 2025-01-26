@@ -16,6 +16,7 @@ func _process(delta: float) -> void:
 func _on_pressed() -> void:
 	click_pressed.play()
 	await get_tree().create_timer(0.2).timeout
+	Global.opt_on = 0
 	Global.music = 1
 	get_tree().change_scene_to_file("res://scenes/title_screen.tscn")
 

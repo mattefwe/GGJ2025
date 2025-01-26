@@ -88,6 +88,7 @@ text = "event1"
 script = ExtResource("4_q3dog")
 
 [node name="TextureRect" type="TextureRect" parent="Button1"]
+layout_mode = 0
 offset_left = 60.6474
 offset_top = -4.70973
 offset_right = 152.647
@@ -110,6 +111,7 @@ text = "event2"
 script = ExtResource("5_qv0yy")
 
 [node name="TextureRect" type="TextureRect" parent="Button2"]
+layout_mode = 0
 offset_left = 60.6474
 offset_top = -4.70973
 offset_right = 152.647
@@ -132,6 +134,7 @@ text = "event3"
 script = ExtResource("6_o86is")
 
 [node name="TextureRect" type="TextureRect" parent="Button3"]
+layout_mode = 0
 offset_left = 60.6474
 offset_top = -4.70973
 offset_right = 152.647
@@ -154,6 +157,7 @@ text = "event4"
 script = ExtResource("7_o8tew")
 
 [node name="TextureRect" type="TextureRect" parent="Button4"]
+layout_mode = 0
 offset_left = 60.6474
 offset_top = -4.70973
 offset_right = 152.647
@@ -176,6 +180,7 @@ text = "event5"
 script = ExtResource("8_w4ah8")
 
 [node name="TextureRect" type="TextureRect" parent="Button5"]
+layout_mode = 0
 offset_left = 60.6474
 offset_top = -4.70973
 offset_right = 152.647
