@@ -42,4 +42,5 @@ script = ExtResource("3_b1ccg")
 
 [node name="EventTab" parent="." instance=ExtResource("4_4ngru")]
 
+[connection signal="ready" from="Label2" to="Label2" method="getText"]
 [connection signal="pressed" from="Label3/Button" to="Label3/Button" method="_on_pressed"]

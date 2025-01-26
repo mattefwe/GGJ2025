@@ -12,7 +12,7 @@ config_version=5
 
 config/name="Popping the Fermi Paradox"
 run/main_scene="res://scenes/title_screen.tscn"
-config/features=PackedStringArray("4.3", "GL Compatibility")
+config/features=PackedStringArray("4.2", "GL Compatibility")
 config/icon="res://icon.svg"
 
 [autoload]
@@ -25,6 +25,7 @@ WorldState="*res://autoload/world_state.gd"
 <<<<<<<HEADWorldState="*res://autoload/world_state.gd"
 Global="*res://scripts/Global.gd"
 Music="*res://scenes/music.tscn"
+EndBubbleText="*res://scenes/EndBubbleText.gd"
 
 [display]
 
