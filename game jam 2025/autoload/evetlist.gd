@@ -4,6 +4,7 @@ var events =[
 	{
 		#if "climate" > 32
 		"id" : "1",
+		"icon" : "res://assets/Volcano.png",
 		"sphere":"climate",
 		"title" : "Volcanic eruption",
 		"desc" : "A volcano is about to explode",
@@ -32,6 +33,7 @@ var events =[
 	{
 		#random
 		"id" : "2",
+		"icon" : "res://assets/Flood.png",
 		"sphere":"climate",
 		"title" : "Flood",
 		"desc" : "The rain started coming heavy and the world is flooded",
@@ -61,6 +63,7 @@ var events =[
 	{
 		#climate > 35 or volcanic eruption
 		"id" : "3",
+		"icon" : "res://assets/Drought.png",
 		"sphere":"climate",
 		"title" : "Drought",
 		"desc" : "The climate is too hot and we are approaching a drought",
@@ -88,6 +91,7 @@ var events =[
 	{
 		#random or flood
 		"id" : "4",
+		"icon" : "res://assets/Tornado.png",
 		"sphere":"climate",
 		"title" : "Tornado",
 		"desc" : "A A tornado has appeared and it seems to be heading straight for the planet",
@@ -781,7 +785,7 @@ func begin():
 	var x = 0
 	while x!=5:
 		x+=1
-		var my_random_number = rng.randi_range(1, 22) # Replace with function body.
+		var my_random_number = rng.randi_range(1, 4) # Replace with function body.
 		Evetlist.arrayevents.append(my_random_number)
 		print(Evetlist.arrayevents)
 func _ready():
