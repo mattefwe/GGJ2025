@@ -1,16 +1,31 @@
-[gd_scene load_steps=23 format=3 uid="uid://pib7otyiciyr"]
+[gd_scene load_steps=28 format=3 uid="uid://pib7otyiciyr"]
 
 [ext_resource type="FontFile" uid="uid://deio8th2c5mp4" path="res://assets/Pixelmax-Regular.otf" id="1_jes8e"]
 [ext_resource type="Script" path="res://scripts/title_screen.gd" id="1_pdktk"]
 [ext_resource type="Texture2D" uid="uid://dwydhc7ac5k1k" path="res://assets/Sfondo1.png" id="2_0ti34"]
 [ext_resource type="Texture2D" uid="uid://kn34nwtgnhnt" path="res://assets/disegno_bottoni.png" id="2_2e7ml"]
+[ext_resource type="Shader" path="res://scenes/title_screen_background.gdshader" id="2_6rpsi"]
 [ext_resource type="Shader" path="res://scenes/title_screen_small.gdshader" id="2_hih1a"]
+[ext_resource type="Texture2D" uid="uid://bbyqeuwuevr8k" path="res://assets/Sfondo2.png" id="4_t1sl0"]
 [ext_resource type="Shader" path="res://scenes/title_screen_big.gdshader" id="4_u3gmx"]
+[ext_resource type="Script" path="res://scenes/background_2.gd" id="5_iabhq"]
 [ext_resource type="FontFile" uid="uid://dqqcurrqs4ko0" path="res://assets/ByteBounce.ttf" id="5_ui8jh"]
 [ext_resource type="AudioStream" uid="uid://dc67a6nmf8rgw" path="res://assets/sounds/CLICK 2.wav" id="7_f857v"]
 [ext_resource type="Texture2D" uid="uid://lfwgnuryq8rh" path="res://assets/mondo_normale.png" id="9_1tva6"]
 [ext_resource type="AudioStream" uid="uid://cj8yo1sugspj4" path="res://assets/sounds/CLICK 1.wav" id="9_4ckfr"]
 [ext_resource type="Script" path="res://scenes/sprite_2d.gd" id="10_t7kc0"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_ry42e"]
+shader = ExtResource("2_6rpsi")
+shader_parameter/height = 5.0
+shader_parameter/frequency = 10.0
+shader_parameter/speed = 2.5
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_3sp6i"]
+shader = ExtResource("2_6rpsi")
+shader_parameter/height = 5.0
+shader_parameter/frequency = 10.0
+shader_parameter/speed = 2.5
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_prcrr"]
 shader = ExtResource("2_hih1a")
@@ -92,9 +107,15 @@ grow_vertical = 2
 script = ExtResource("1_pdktk")
 
 [node name="Background1" type="Sprite2D" parent="."]
+material = SubResource("ShaderMaterial_ry42e")
 position = Vector2(603, 362)
 scale = Vector2(5.47833, 5.47833)
 texture = ExtResource("2_0ti34")
+
+[node name="Background2" type="Sprite2D" parent="Background1"]
+material = SubResource("ShaderMaterial_3sp6i")
+texture = ExtResource("4_t1sl0")
+script = ExtResource("5_iabhq")
 
 [node name="Popping the" type="Label" parent="."]
 material = SubResource("ShaderMaterial_prcrr")
