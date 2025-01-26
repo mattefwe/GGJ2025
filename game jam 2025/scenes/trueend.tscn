@@ -1,3 +1,10 @@
 [gd_scene format=3 uid="uid://6mb6sri2to64"]
 
 [node name="Trueend" type="Node2D"]
+
+[node name="Label" type="Label" parent="."]
+offset_right = 40.0
+offset_bottom = 23.0
+scale = Vector2(28.7889, 9.40718)
+text = "ciao
+"
