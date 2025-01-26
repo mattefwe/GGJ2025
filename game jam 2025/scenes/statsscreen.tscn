@@ -1,0 +1,67 @@
+[gd_scene format=3 uid="uid://grest7gmhj3n"]
+
+[node name="Statsscreen" type="Node2D"]
+
+[node name="Label" type="Label" parent="."]
+offset_left = 24.0
+offset_top = 31.0
+offset_right = 64.0
+offset_bottom = 54.0
+scale = Vector2(4.96869, 3.58504)
+text = "climate"
+
+[node name="Label2" type="Label" parent="."]
+offset_left = 26.0
+offset_top = 530.0
+offset_right = 252.0
+offset_bottom = 553.0
+scale = Vector2(4.82196, 4.55982)
+text = "global technological progress"
+
+[node name="Label3" type="Label" parent="."]
+offset_left = 76.0
+offset_top = 301.0
+offset_right = 116.0
+offset_bottom = 324.0
+scale = Vector2(3.5602, 4.48792)
+text = "international stability"
+
+[node name="Label4" type="Label" parent="."]
+offset_left = 498.0
+offset_top = 363.0
+offset_right = 538.0
+offset_bottom = 386.0
+scale = Vector2(3.95113, 4.85136)
+text = "global unrest"
+
+[node name="Label5" type="Label" parent="."]
+offset_left = 259.0
+offset_top = 202.0
+offset_right = 299.0
+offset_bottom = 225.0
+scale = Vector2(3.64554, 3.30123)
+text = "global military might"
+
+[node name="Label6" type="Label" parent="."]
+offset_left = 146.0
+offset_top = 447.0
+offset_right = 186.0
+offset_bottom = 470.0
+scale = Vector2(6.16224, 4.73747)
+text = "bubble resistance"
+
+[node name="Label7" type="Label" parent="."]
+offset_left = 694.0
+offset_top = 41.0
+offset_right = 734.0
+offset_bottom = 64.0
+scale = Vector2(4.44474, 3.65154)
+text = "awareness of the bubble"
+
+[node name="Label8" type="Label" parent="."]
+offset_left = 30.0
+offset_top = 116.0
+offset_right = 152.0
+offset_bottom = 139.0
+scale = Vector2(7.75655, 4.15752)
+text = "global economy"

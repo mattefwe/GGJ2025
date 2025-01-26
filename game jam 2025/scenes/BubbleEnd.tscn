@@ -1,6 +1,7 @@
-[gd_scene load_steps=2 format=3 uid="uid://cnnvfo0vqss8e"]
+[gd_scene load_steps=3 format=3 uid="uid://cnnvfo0vqss8e"]
 
 [ext_resource type="FontFile" uid="uid://b84omp6hsqd5n" path="res://assets/Pixelmax-Outline.otf" id="1_bghrw"]
+[ext_resource type="Script" path="res://scenes/EndBubbleText.gd" id="2_j7j0h"]
 
 [node name="BubbleEnd" type="Node2D"]
 
@@ -12,3 +13,10 @@ offset_bottom = 406.0
 theme_override_fonts/font = ExtResource("1_bghrw")
 theme_override_font_sizes/font_size = 144
 text = "Diommerda"
+
+[node name="Label2" type="Label" parent="."]
+offset_right = 40.0
+offset_bottom = 23.0
+scale = Vector2(28.9625, 27.886)
+text = "test"
+script = ExtResource("2_j7j0h")
