@@ -1,4 +1,4 @@
-[gd_scene load_steps=25 format=3 uid="uid://cjpr1b3wgqyej"]
+[gd_scene load_steps=33 format=3 uid="uid://cjpr1b3wgqyej"]
 
 [ext_resource type="Script" path="res://scripts/in_game.gd" id="1_6qcy7"]
 [ext_resource type="Texture2D" uid="uid://kn34nwtgnhnt" path="res://assets/disegno_bottoni.png" id="2_0oyud"]
@@ -17,6 +17,14 @@
 [ext_resource type="AudioStream" uid="uid://dcfdagc84f6rb" path="res://assets/sounds/CLICK/CLICK 2.wav" id="14_bsj15"]
 [ext_resource type="AudioStream" uid="uid://c6vjry72injmk" path="res://assets/sounds/CLICK/CLICK 1.wav" id="15_p4m3v"]
 [ext_resource type="Texture2D" path="res://assets/lista_eventi.png" id="17_3w7n6"]
+[ext_resource type="Script" path="res://scenes/statisticlabel1.gd" id="17_ubylh"]
+[ext_resource type="Script" path="res://scenes/statisticlabel2.gd" id="18_blcnb"]
+[ext_resource type="Script" path="res://scenes/statisticlabel3.gd" id="19_5yiuc"]
+[ext_resource type="Script" path="res://scenes/statisticlabel4.gd" id="20_mvu1i"]
+[ext_resource type="Script" path="res://scenes/statisticlabel5.gd" id="21_c2xt8"]
+[ext_resource type="Script" path="res://scenes/statisticlabel6.gd" id="22_151js"]
+[ext_resource type="Script" path="res://scenes/statisticlabel7.gd" id="23_65p2o"]
+[ext_resource type="Script" path="res://scenes/statisticlabel8.gd" id="24_y8lp3"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_jfs7w"]
 shader = ExtResource("2_53kok")
@@ -166,6 +174,70 @@ rotation = 1.5701
 scale = Vector2(2.99167, 2.99167)
 texture = ExtResource("17_3w7n6")
 flip_v = true
+
+[node name="Label" type="Label" parent="."]
+offset_left = -330.0
+offset_top = -177.0
+offset_right = -290.0
+offset_bottom = -154.0
+text = "1"
+script = ExtResource("17_ubylh")
+
+[node name="Label2" type="Label" parent="."]
+offset_left = -330.0
+offset_top = -146.0
+offset_right = -290.0
+offset_bottom = -123.0
+text = "2"
+script = ExtResource("18_blcnb")
+
+[node name="Label3" type="Label" parent="."]
+offset_left = -330.0
+offset_top = -117.0
+offset_right = -290.0
+offset_bottom = -94.0
+text = "3"
+script = ExtResource("19_5yiuc")
+
+[node name="Label4" type="Label" parent="."]
+offset_left = -331.0
+offset_top = -86.0
+offset_right = -291.0
+offset_bottom = -63.0
+text = "4"
+script = ExtResource("20_mvu1i")
+
+[node name="Label5" type="Label" parent="."]
+offset_left = -330.0
+offset_top = -58.0
+offset_right = -290.0
+offset_bottom = -35.0
+text = "5"
+script = ExtResource("21_c2xt8")
+
+[node name="Label6" type="Label" parent="."]
+offset_left = -331.0
+offset_top = -29.0
+offset_right = -291.0
+offset_bottom = -6.0
+text = "6"
+script = ExtResource("22_151js")
+
+[node name="Label7" type="Label" parent="."]
+offset_left = -331.0
+offset_top = 6.0
+offset_right = -291.0
+offset_bottom = 29.0
+text = "7"
+script = ExtResource("23_65p2o")
+
+[node name="Label8" type="Label" parent="."]
+offset_left = -330.0
+offset_top = 38.0
+offset_right = -290.0
+offset_bottom = 61.0
+text = "8"
+script = ExtResource("24_y8lp3")
 
 [node name="EventTab" parent="." instance=ExtResource("7_ndav0")]
 offset_left = -580.0
