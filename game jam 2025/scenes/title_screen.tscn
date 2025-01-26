@@ -1,4 +1,4 @@
-[gd_scene load_steps=27 format=3 uid="uid://pib7otyiciyr"]
+[gd_scene load_steps=28 format=3 uid="uid://pib7otyiciyr"]
 
 [ext_resource type="FontFile" uid="uid://deio8th2c5mp4" path="res://assets/Pixelmax-Regular.otf" id="1_jes8e"]
 [ext_resource type="Script" path="res://scripts/title_screen.gd" id="1_pdktk"]
@@ -9,11 +9,12 @@
 [ext_resource type="Texture2D" uid="uid://c1eq2dormw2jn" path="res://assets/Sfondo2.png" id="4_t1sl0"]
 [ext_resource type="Shader" path="res://scenes/title_screen_big.gdshader" id="4_u3gmx"]
 [ext_resource type="FontFile" uid="uid://dqqcurrqs4ko0" path="res://assets/ByteBounce.ttf" id="5_ui8jh"]
-[ext_resource type="AudioStream" uid="uid://dc67a6nmf8rgw" path="res://assets/sounds/CLICK 2.wav" id="7_f857v"]
 [ext_resource type="Texture2D" uid="uid://lfwgnuryq8rh" path="res://assets/mondo_normale.png" id="9_1tva6"]
-[ext_resource type="AudioStream" uid="uid://cj8yo1sugspj4" path="res://assets/sounds/CLICK 1.wav" id="9_4ckfr"]
+[ext_resource type="AudioStream" uid="uid://dcfdagc84f6rb" path="res://assets/sounds/CLICK/CLICK 2.wav" id="10_7hygr"]
 [ext_resource type="Script" path="res://scenes/sprite_2d.gd" id="10_t7kc0"]
+[ext_resource type="AudioStream" uid="uid://c6vjry72injmk" path="res://assets/sounds/CLICK/CLICK 1.wav" id="11_opom3"]
 [ext_resource type="PackedScene" uid="uid://dg1sjsldykkju" path="res://scenes/options_tab.tscn" id="14_2ic4g"]
+[ext_resource type="Texture2D" uid="uid://j3wse8t1y6o0" path="res://assets/Catastrofi.png" id="14_xsp5h"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_ry42e"]
 shader = ExtResource("2_6rpsi")
@@ -102,8 +103,8 @@ script = ExtResource("1_pdktk")
 
 [node name="Background1" type="Sprite2D" parent="."]
 material = SubResource("ShaderMaterial_ry42e")
-position = Vector2(603, 362)
-scale = Vector2(5.47833, 5.47833)
+position = Vector2(598, 327)
+scale = Vector2(4.93333, 4.93333)
 texture = ExtResource("4_t1sl0")
 
 [node name="Background2" type="Sprite2D" parent="."]
@@ -192,16 +193,42 @@ theme_override_styles/normal = SubResource("StyleBoxTexture_m8lob")
 text = "Quit"
 
 [node name="ClickPressed" type="AudioStreamPlayer2D" parent="."]
-stream = ExtResource("7_f857v")
+stream = ExtResource("10_7hygr")
 
 [node name="ClickHover" type="AudioStreamPlayer2D" parent="."]
-stream = ExtResource("9_4ckfr")
+stream = ExtResource("11_opom3")
 
 [node name="Earth" type="Sprite2D" parent="."]
 position = Vector2(907, 683)
 scale = Vector2(6.715, 6.715)
 texture = ExtResource("9_1tva6")
 script = ExtResource("10_t7kc0")
+
+[node name="Ravines" type="Sprite2D" parent="Earth"]
+position = Vector2(5.51005, 3.42517)
+texture = ExtResource("14_xsp5h")
+region_enabled = true
+region_rect = Rect2(0, 34, 100, 89)
+
+[node name="Volcanoes" type="Sprite2D" parent="Earth"]
+position = Vector2(47.5056, -17.2748)
+rotation = 0.954602
+texture = ExtResource("14_xsp5h")
+region_enabled = true
+region_rect = Rect2(121, 51, 76, 43)
+
+[node name="Storms" type="Sprite2D" parent="Earth"]
+position = Vector2(-51.0797, -11.3179)
+rotation = -2.70498
+texture = ExtResource("14_xsp5h")
+region_enabled = true
+region_rect = Rect2(165, 7, 24, 47)
+
+[node name="Tornado" type="Sprite2D" parent="Earth"]
+position = Vector2(34.2517, 44.5272)
+texture = ExtResource("14_xsp5h")
+region_enabled = true
+region_rect = Rect2(119, 6, 32, 40)
 
 [node name="options_tab" parent="." instance=ExtResource("14_2ic4g")]
 visible = false

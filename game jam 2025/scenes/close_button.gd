@@ -1,7 +1,7 @@
 extends Button
 
-@onready var click_pressed: AudioStreamPlayer2D = $"../../ClickPressed"
-@onready var click_hover: AudioStreamPlayer2D = $"../../ClickHover"
+@onready var click_pressed: AudioStreamPlayer2D = $"../ClickPressed"
+@onready var click_hover: AudioStreamPlayer2D = $"../ClickHover"
 #@onready var panel: Panel = $".."
 
 # Called when the node enters the scene tree for the first time.

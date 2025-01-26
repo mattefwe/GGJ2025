@@ -1,8 +1,8 @@
 extends Button
 var id = Evetlist.arrayevents[4]
 
-@onready var click_pressed: AudioStreamPlayer2D = $"../../ClickPressed"
-@onready var click_hover: AudioStreamPlayer2D = $"../../ClickHover"
+@onready var click_pressed: AudioStreamPlayer2D = $"../ClickPressed"
+@onready var click_hover: AudioStreamPlayer2D = $"../ClickHover"
 
 func _ready():
 	print(Evetlist.arrayevents)

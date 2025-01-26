@@ -1,20 +1,10 @@
-[gd_scene load_steps=5 format=3 uid="uid://cnnvfo0vqss8e"]
+[gd_scene load_steps=4 format=3 uid="uid://cnnvfo0vqss8e"]
 
-[ext_resource type="FontFile" uid="uid://b84omp6hsqd5n" path="res://assets/Pixelmax-Outline.otf" id="1_bghrw"]
 [ext_resource type="Script" path="res://scenes/EndBubbleText.gd" id="2_j7j0h"]
 [ext_resource type="Script" path="res://scenes/Buttonokendbubble.gd" id="3_b1ccg"]
 [ext_resource type="PackedScene" uid="uid://dp56fmpt2l14o" path="res://scenes/event_tab.tscn" id="4_4ngru"]
 
 [node name="BubbleEnd" type="Node2D"]
-
-[node name="Label" type="Label" parent="."]
-offset_left = 153.0
-offset_top = 254.0
-offset_right = 1024.0
-offset_bottom = 406.0
-theme_override_fonts/font = ExtResource("1_bghrw")
-theme_override_font_sizes/font_size = 144
-text = "Diommerda"
 
 [node name="Label2" type="Label" parent="."]
 offset_left = 272.0

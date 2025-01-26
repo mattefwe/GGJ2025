@@ -6,9 +6,9 @@
 [ext_resource type="Texture2D" uid="uid://kn34nwtgnhnt" path="res://assets/disegno_bottoni.png" id="3_ttolh"]
 [ext_resource type="Script" path="res://scenes/main_menu_button.gd" id="4_tdanc"]
 [ext_resource type="Script" path="res://scenes/cancel_button.gd" id="5_0cdl1"]
-[ext_resource type="AudioStream" uid="uid://dc67a6nmf8rgw" path="res://assets/sounds/CLICK 2.wav" id="6_f847h"]
-[ext_resource type="AudioStream" uid="uid://cj8yo1sugspj4" path="res://assets/sounds/CLICK 1.wav" id="7_halce"]
 [ext_resource type="Script" path="res://scenes/volume_slider.gd" id="7_tcv8s"]
+[ext_resource type="AudioStream" uid="uid://dcfdagc84f6rb" path="res://assets/sounds/CLICK/CLICK 2.wav" id="8_mjl0l"]
+[ext_resource type="AudioStream" uid="uid://c6vjry72injmk" path="res://assets/sounds/CLICK/CLICK 1.wav" id="9_ftoco"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_pb5lo"]
 texture = ExtResource("1_4l6k0")
@@ -114,10 +114,10 @@ value = -28.0
 script = ExtResource("7_tcv8s")
 
 [node name="ClickPressed" type="AudioStreamPlayer2D" parent="."]
-stream = ExtResource("6_f847h")
+stream = ExtResource("8_mjl0l")
 
 [node name="ClickHover" type="AudioStreamPlayer2D" parent="."]
-stream = ExtResource("7_halce")
+stream = ExtResource("9_ftoco")
 
 [connection signal="mouse_entered" from="Panel/MainMenuButton" to="Panel/MainMenuButton" method="_on_mouse_entered"]
 [connection signal="pressed" from="Panel/MainMenuButton" to="Panel/MainMenuButton" method="_on_pressed"]
