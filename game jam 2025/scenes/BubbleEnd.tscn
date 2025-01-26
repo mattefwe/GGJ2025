@@ -27,17 +27,18 @@ autowrap_mode = 2
 script = ExtResource("2_j7j0h")
 
 [node name="Label3" type="Label" parent="."]
-offset_left = 486.0
-offset_top = 503.0
-offset_right = 526.0
-offset_bottom = 526.0
+offset_left = 384.0
+offset_top = 526.0
+offset_right = 480.0
+offset_bottom = 549.0
 scale = Vector2(3.87108, 3.32476)
 text = "Next Bubble"
 
 [node name="Button" type="Button" parent="Label3"]
 layout_mode = 0
-offset_right = 8.0
-offset_bottom = 8.0
+offset_top = -1.0
+offset_right = 31.0
+offset_bottom = 7.0
 scale = Vector2(3.06812, 2.98179)
 script = ExtResource("3_b1ccg")
 

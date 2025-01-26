@@ -16,7 +16,7 @@
 [ext_resource type="PackedScene" uid="uid://dg1sjsldykkju" path="res://scenes/options_tab.tscn" id="13_7x8iu"]
 [ext_resource type="AudioStream" uid="uid://dcfdagc84f6rb" path="res://assets/sounds/CLICK/CLICK 2.wav" id="14_bsj15"]
 [ext_resource type="AudioStream" uid="uid://c6vjry72injmk" path="res://assets/sounds/CLICK/CLICK 1.wav" id="15_p4m3v"]
-[ext_resource type="Texture2D" path="res://assets/lista_eventi.png" id="17_3w7n6"]
+[ext_resource type="Texture2D" uid="uid://bcbmxt3sbbajb" path="res://assets/lista_eventi.png" id="17_3w7n6"]
 [ext_resource type="Script" path="res://scenes/statisticlabel1.gd" id="17_ubylh"]
 [ext_resource type="Script" path="res://scenes/statisticlabel2.gd" id="18_blcnb"]
 [ext_resource type="Script" path="res://scenes/statisticlabel3.gd" id="19_5yiuc"]
@@ -34,6 +34,8 @@ shader_parameter/speed = 1.0
 
 [sub_resource type="Theme" id="Theme_roxym"]
 
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_mkth5"]
+
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_j350d"]
 texture = ExtResource("2_0oyud")
 expand_margin_left = 5.0
@@ -49,8 +51,6 @@ expand_margin_top = 5.0
 expand_margin_right = 5.0
 expand_margin_bottom = 5.0
 region_rect = Rect2(42, 55, 38, 14)
-
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_mkth5"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_ratmo"]
 texture = ExtResource("2_0oyud")
@@ -97,10 +97,10 @@ offset_bottom = 167.0
 theme = SubResource("Theme_roxym")
 theme_override_fonts/font = ExtResource("4_7g4k8")
 theme_override_font_sizes/font_size = 48
-theme_override_styles/normal = SubResource("StyleBoxTexture_j350d")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_mkth5")
 theme_override_styles/hover = SubResource("StyleBoxTexture_j350d")
 theme_override_styles/pressed = SubResource("StyleBoxTexture_xpldp")
-theme_override_styles/focus = SubResource("StyleBoxEmpty_mkth5")
+theme_override_styles/normal = SubResource("StyleBoxTexture_j350d")
 text = "Events"
 script = ExtResource("6_vhk76")
 
@@ -112,10 +112,10 @@ offset_bottom = -128.0
 theme = SubResource("Theme_roxym")
 theme_override_fonts/font = ExtResource("4_7g4k8")
 theme_override_font_sizes/font_size = 32
-theme_override_styles/normal = SubResource("StyleBoxTexture_ratmo")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_mkth5")
 theme_override_styles/hover = SubResource("StyleBoxTexture_ratmo")
 theme_override_styles/pressed = SubResource("StyleBoxTexture_45u0t")
-theme_override_styles/focus = SubResource("StyleBoxEmpty_mkth5")
+theme_override_styles/normal = SubResource("StyleBoxTexture_ratmo")
 text = "Stats"
 script = ExtResource("7_yyic5")
 
@@ -127,10 +127,10 @@ offset_bottom = -128.0
 theme = SubResource("Theme_roxym")
 theme_override_fonts/font = ExtResource("4_7g4k8")
 theme_override_font_sizes/font_size = 32
-theme_override_styles/normal = SubResource("StyleBoxTexture_ratmo")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_mkth5")
 theme_override_styles/hover = SubResource("StyleBoxTexture_ratmo")
 theme_override_styles/pressed = SubResource("StyleBoxTexture_45u0t")
-theme_override_styles/focus = SubResource("StyleBoxEmpty_mkth5")
+theme_override_styles/normal = SubResource("StyleBoxTexture_ratmo")
 text = "
 "
 script = ExtResource("8_sj4vq")
