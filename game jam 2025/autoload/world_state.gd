@@ -74,7 +74,7 @@ func _process(delta):
 	pass
 	
 func bubblecompleted():
-	if WorldState.bubbles_completed == 0:
+	if WorldState.bubbles_completed == 99:
 		get_tree().change_scene_to_file("res://scenes/trueend.tscn")
 	else:
 		get_tree().change_scene_to_file("res://scenes/in_game.tscn")
