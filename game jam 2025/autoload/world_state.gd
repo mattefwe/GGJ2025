@@ -1,13 +1,18 @@
 extends Node
 
-var economic_sit = 0
-var climate = 0
-var tech = 0
-var int_stab = 0
-var unrest = 0
-var might = 0
-var bubble_res = 0
-var bubble_akn = 0
+var bubbles_completed = 0
+
+var rng = RandomNumberGenerator.new()
+#var my_random_number = rng.randi_range(1, 4)
+
+var economic_sit = rng.randi_range(-5,5)
+var climate = rng.randi_range(-10,40)
+var tech = rng.randi_range(0,10)
+var int_stab = rng.randi_range(-7,7)
+var unrest = rng.randi_range(0,10)
+var might = rng.randi_range(0,10)
+var bubble_res = rng.randi_range(0,5)
+var bubble_akn = rng.randi_range(0,20)
 var world_type = 0
 # Called when the node enters the scene tree for the first time.
 
@@ -30,14 +35,17 @@ func eventopen(num):
 		event5opened = true
 
 func _ready():
-	var economic_sit = 0
-	var climate = 0
-	var tech = 0
-	var int_stab = 0
-	var unrest = 0
-	var might = 0
-	var bubble_res = 0
-	var bubble_akn = 0
+	var rng = RandomNumberGenerator.new()
+#var my_random_number = rng.randi_range(1, 4)
+
+	var economic_sit = rng.randi_range(-5,5)
+	var climate = rng.randi_range(-10,40)
+	var tech = rng.randi_range(0,10)
+	var int_stab = rng.randi_range(-7,7)
+	var unrest = rng.randi_range(0,10)
+	var might = rng.randi_range(0,10)
+	var bubble_res = rng.randi_range(0,5)
+	var bubble_akn = rng.randi_range(0,20)
 	var world_type = 0
 
 func world_update(parameter, change):
@@ -64,3 +72,16 @@ func world_update(parameter, change):
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
 	pass
+	
+func bubblecompleted():
+	if WorldState.bubbles_completed == 4:
+		get_tree().change_scene_to_file("res://scenes/trueend.tscn")
+	else:
+		get_tree().change_scene_to_file("res://scenes/in_game.tscn")
+		WorldState.bubbles_completed += 1
+		WorldState.event1opened = false
+		WorldState.event2opened = false
+		WorldState.event3opened = false
+		WorldState.event4opened = false
+		WorldState.event5opened = false
+		Evetlist.begin()
