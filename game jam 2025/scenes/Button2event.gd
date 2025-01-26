@@ -5,10 +5,10 @@ var id = Evetlist.arrayevents[1]
 @onready var click_hover: AudioStreamPlayer2D = $"../ClickHover"
 
 func _ready():
-	print(Evetlist.arrayevents)
-	print(id)
-	set_text(Evetlist.events[id-1]["title"])
-	var texture = Evetlist.events[id-1]["icon"]
+	#print(Evetlist.arrayevents)
+	#print(id)
+	#set_text(Evetlist.events[id-1]["title"])
+	var texture = Evetlist.events[id]["icon"]
 	$TextureRect.texture = ResourceLoader.load(texture)
 func _on_pressed():
 	click_pressed.play()
