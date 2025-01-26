@@ -145,9 +145,9 @@ offset_bottom = -128.0
 [node name="EventTab" parent="." instance=ExtResource("7_ndav0")]
 visible = false
 offset_left = -580.0
-offset_top = -313.0
+offset_top = -310.0
 offset_right = -580.0
-offset_bottom = -313.0
+offset_bottom = -310.0
 
 [node name="ClickPressed" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("9_fcm2l")
