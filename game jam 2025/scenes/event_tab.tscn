@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" path="res://scenes/event_tab.gd" id="1_ri0d5"]
 [ext_resource type="FontFile" uid="uid://dqqcurrqs4ko0" path="res://assets/ByteBounce.ttf" id="2_jxggd"]
-[ext_resource type="Texture2D" uid="uid://bcbmxt3sbbajb" path="res://assets/lista_eventi.png" id="2_uqtvl"]
+[ext_resource type="Texture2D" path="res://assets/lista_eventi.png" id="2_uqtvl"]
 [ext_resource type="Texture2D" uid="uid://kn34nwtgnhnt" path="res://assets/disegno_bottoni.png" id="3_b5sla"]
 [ext_resource type="Script" path="res://scenes/Button1event.gd" id="4_q3dog"]
 [ext_resource type="Script" path="res://scenes/Button2event.gd" id="5_qv0yy"]
@@ -12,8 +12,6 @@
 [ext_resource type="Script" path="res://scenes/close_button.gd" id="9_40bqh"]
 [ext_resource type="AudioStream" uid="uid://dc67a6nmf8rgw" path="res://assets/sounds/CLICK 2.wav" id="9_croyq"]
 [ext_resource type="AudioStream" uid="uid://cj8yo1sugspj4" path="res://assets/sounds/CLICK 1.wav" id="10_r714d"]
-
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_ng2fn"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_uvye1"]
 texture = ExtResource("3_b5sla")
@@ -31,6 +29,8 @@ expand_margin_right = 5.0
 expand_margin_bottom = 5.0
 region_rect = Rect2(42, 85, 38, 14)
 
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_ng2fn"]
+
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_1jtvc"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_hb4lm"]
@@ -38,8 +38,6 @@ region_rect = Rect2(42, 85, 38, 14)
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_grppt"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_yxdqc"]
-
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_bay67"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_1vvlr"]
 texture = ExtResource("3_b5sla")
@@ -57,6 +55,8 @@ expand_margin_right = 5.0
 expand_margin_bottom = 5.0
 region_rect = Rect2(42, 40, 19, 14)
 
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_bay67"]
+
 [node name="EventTab" type="Control"]
 layout_mode = 3
 anchors_preset = 15
@@ -72,6 +72,7 @@ scale = Vector2(3.10833, 3.10833)
 texture = ExtResource("2_uqtvl")
 
 [node name="Button1" type="Button" parent="."]
+layout_mode = 0
 offset_left = 337.0
 offset_top = 217.0
 offset_right = 558.0
@@ -79,14 +80,15 @@ offset_bottom = 253.0
 scale = Vector2(0.65955, 1.27396)
 theme_override_fonts/font = ExtResource("2_jxggd")
 theme_override_font_sizes/font_size = 48
-theme_override_styles/focus = SubResource("StyleBoxEmpty_ng2fn")
+theme_override_styles/normal = SubResource("StyleBoxTexture_uvye1")
 theme_override_styles/hover = SubResource("StyleBoxTexture_uvye1")
 theme_override_styles/pressed = SubResource("StyleBoxTexture_0af1l")
-theme_override_styles/normal = SubResource("StyleBoxTexture_uvye1")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_ng2fn")
 text = "event1"
 script = ExtResource("4_q3dog")
 
 [node name="Button2" type="Button" parent="."]
+layout_mode = 0
 offset_left = 512.0
 offset_top = 217.0
 offset_right = 733.0
@@ -94,14 +96,15 @@ offset_bottom = 253.0
 scale = Vector2(0.65955, 1.27396)
 theme_override_fonts/font = ExtResource("2_jxggd")
 theme_override_font_sizes/font_size = 48
-theme_override_styles/focus = SubResource("StyleBoxEmpty_1jtvc")
+theme_override_styles/normal = SubResource("StyleBoxTexture_uvye1")
 theme_override_styles/hover = SubResource("StyleBoxTexture_uvye1")
 theme_override_styles/pressed = SubResource("StyleBoxTexture_0af1l")
-theme_override_styles/normal = SubResource("StyleBoxTexture_uvye1")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_1jtvc")
 text = "event2"
 script = ExtResource("5_qv0yy")
 
 [node name="Button3" type="Button" parent="."]
+layout_mode = 0
 offset_left = 682.0
 offset_top = 217.0
 offset_right = 899.0
@@ -109,14 +112,15 @@ offset_bottom = 252.0
 scale = Vector2(0.65955, 1.27396)
 theme_override_fonts/font = ExtResource("2_jxggd")
 theme_override_font_sizes/font_size = 48
-theme_override_styles/focus = SubResource("StyleBoxEmpty_hb4lm")
+theme_override_styles/normal = SubResource("StyleBoxTexture_uvye1")
 theme_override_styles/hover = SubResource("StyleBoxTexture_uvye1")
 theme_override_styles/pressed = SubResource("StyleBoxTexture_0af1l")
-theme_override_styles/normal = SubResource("StyleBoxTexture_uvye1")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_hb4lm")
 text = "event3"
 script = ExtResource("6_o86is")
 
 [node name="Button4" type="Button" parent="."]
+layout_mode = 0
 offset_left = 338.0
 offset_top = 292.0
 offset_right = 559.0
@@ -124,14 +128,15 @@ offset_bottom = 328.0
 scale = Vector2(0.65955, 1.27396)
 theme_override_fonts/font = ExtResource("2_jxggd")
 theme_override_font_sizes/font_size = 48
-theme_override_styles/focus = SubResource("StyleBoxEmpty_grppt")
+theme_override_styles/normal = SubResource("StyleBoxTexture_uvye1")
 theme_override_styles/hover = SubResource("StyleBoxTexture_uvye1")
 theme_override_styles/pressed = SubResource("StyleBoxTexture_0af1l")
-theme_override_styles/normal = SubResource("StyleBoxTexture_uvye1")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_grppt")
 text = "event4"
 script = ExtResource("7_o8tew")
 
 [node name="Button5" type="Button" parent="."]
+layout_mode = 0
 offset_left = 512.0
 offset_top = 292.0
 offset_right = 735.0
@@ -139,24 +144,25 @@ offset_bottom = 328.0
 scale = Vector2(0.65955, 1.27396)
 theme_override_fonts/font = ExtResource("2_jxggd")
 theme_override_font_sizes/font_size = 48
-theme_override_styles/focus = SubResource("StyleBoxEmpty_yxdqc")
+theme_override_styles/normal = SubResource("StyleBoxTexture_uvye1")
 theme_override_styles/hover = SubResource("StyleBoxTexture_uvye1")
 theme_override_styles/pressed = SubResource("StyleBoxTexture_0af1l")
-theme_override_styles/normal = SubResource("StyleBoxTexture_uvye1")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_yxdqc")
 text = "event5"
 script = ExtResource("8_w4ah8")
 
 [node name="CloseButton" type="Button" parent="."]
+layout_mode = 0
 offset_left = 538.0
 offset_top = 402.0
 offset_right = 620.0
 offset_bottom = 458.0
 theme_override_fonts/font = ExtResource("2_jxggd")
 theme_override_font_sizes/font_size = 32
-theme_override_styles/focus = SubResource("StyleBoxEmpty_bay67")
+theme_override_styles/normal = SubResource("StyleBoxTexture_1vvlr")
 theme_override_styles/hover = SubResource("StyleBoxTexture_1vvlr")
 theme_override_styles/pressed = SubResource("StyleBoxTexture_aacpa")
-theme_override_styles/normal = SubResource("StyleBoxTexture_1vvlr")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_bay67")
 text = "Close"
 script = ExtResource("9_40bqh")
 

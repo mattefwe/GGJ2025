@@ -585,6 +585,8 @@ var events =[
 				}
 			
 			},
+			]
+		},
 	{
 		"id" : "18",
 		"sphere":"bubble_awarness",
@@ -767,9 +769,8 @@ var events =[
 		]
 	},
 	
-		]
-	},
-]	
+	]
+
 #var options = []
 var arrayevents = []
 # Called when the node enters the scene tree for the first time.
