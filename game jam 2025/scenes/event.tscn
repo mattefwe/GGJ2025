@@ -1,8 +1,10 @@
-[gd_scene load_steps=4 format=3 uid="uid://dq78whhunnx84"]
+[gd_scene load_steps=6 format=3 uid="uid://dq78whhunnx84"]
 
 [ext_resource type="Script" path="res://autoload/evetlist.gd" id="1_vex2u"]
-[ext_resource type="Script" path="res://scenes/Buttonoption.gd" id="2_i5oev"]
-[ext_resource type="Script" path="res://autoload/Buttontext.gd" id="3_4duya"]
+[ext_resource type="Script" path="res://scenes/Button2option.gd" id="3_5g86p"]
+[ext_resource type="Script" path="res://scenes/Button1option.gd" id="3_q2w8h"]
+[ext_resource type="Script" path="res://scenes/Button3option.gd" id="4_js6os"]
+[ext_resource type="Script" path="res://scenes/Button4option.gd" id="5_sm6kb"]
 
 [node name="Event" type="Node2D"]
 script = ExtResource("1_vex2u")
@@ -12,7 +14,6 @@ offset_left = 236.0
 offset_top = 415.0
 offset_right = 451.0
 offset_bottom = 525.0
-script = ExtResource("2_i5oev")
 
 [node name="Button" type="Button" parent="Panel"]
 layout_mode = 0
@@ -21,23 +22,52 @@ offset_bottom = 884.0
 scale = Vector2(0.125885, 0.126045)
 theme_override_font_sizes/font_size = 150
 text = "option 1"
-script = ExtResource("3_4duya")
+script = ExtResource("3_q2w8h")
 
 [node name="Panel2" type="Panel" parent="."]
 offset_left = 769.0
 offset_top = 415.0
 offset_right = 977.0
 offset_bottom = 518.0
-script = ExtResource("2_i5oev")
 
 [node name="Button" type="Button" parent="Panel2"]
 layout_mode = 0
 offset_right = 210.0
 offset_bottom = 103.0
 text = "option 2"
-script = ExtResource("3_4duya")
+script = ExtResource("3_5g86p")
 
-[connection signal="pressed" from="Panel/Button" to="." method="trigger_option" binds= ["1"]]
-[connection signal="ready" from="Panel/Button" to="Panel/Button" method="getText" binds= ["1"]]
-[connection signal="pressed" from="Panel2/Button" to="." method="trigger_option" binds= ["2"]]
-[connection signal="ready" from="Panel2/Button" to="Panel2/Button" method="getText" binds= ["2"]]
+[node name="Panel3" type="Panel" parent="."]
+offset_left = 235.0
+offset_top = 277.0
+offset_right = 275.0
+offset_bottom = 317.0
+scale = Vector2(5.29499, 2.64238)
+
+[node name="Button" type="Button" parent="Panel3"]
+layout_mode = 0
+offset_right = 8.0
+offset_bottom = 8.0
+script = ExtResource("4_js6os")
+
+[node name="Panel4" type="Panel" parent="."]
+offset_left = 768.0
+offset_top = 277.0
+offset_right = 945.0
+offset_bottom = 371.0
+scale = Vector2(1.17292, 1.13252)
+
+[node name="Button" type="Button" parent="Panel4"]
+layout_mode = 0
+offset_right = 8.0
+offset_bottom = 8.0
+script = ExtResource("5_sm6kb")
+
+[connection signal="pressed" from="Panel/Button" to="Panel/Button" method="_on_pressed"]
+[connection signal="ready" from="Panel/Button" to="Panel/Button" method="getText"]
+[connection signal="pressed" from="Panel2/Button" to="Panel2/Button" method="_on_pressed"]
+[connection signal="ready" from="Panel2/Button" to="Panel2/Button" method="getText"]
+[connection signal="pressed" from="Panel3/Button" to="Panel3/Button" method="_on_pressed"]
+[connection signal="ready" from="Panel3/Button" to="Panel3/Button" method="getText"]
+[connection signal="pressed" from="Panel4/Button" to="Panel4/Button" method="_on_pressed"]
+[connection signal="ready" from="Panel4/Button" to="Panel4/Button" method="getText"]

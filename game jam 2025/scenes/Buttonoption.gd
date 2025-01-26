@@ -12,5 +12,5 @@ func _process(delta):
 	pass
 
 
-func _on_button_pressed(extra_arg_0, extra_arg_1):
-	pass # Replace with function body.
+func _on_button_pressed():
+	Evetlist.trigger_option(1)# Replace with function body.
