@@ -1,9 +1,11 @@
-[gd_scene load_steps=21 format=3 uid="uid://cjpr1b3wgqyej"]
+[gd_scene load_steps=23 format=3 uid="uid://cjpr1b3wgqyej"]
 
 [ext_resource type="Script" path="res://scripts/in_game.gd" id="1_6qcy7"]
 [ext_resource type="Texture2D" uid="uid://kn34nwtgnhnt" path="res://assets/disegno_bottoni.png" id="2_0oyud"]
+[ext_resource type="Shader" path="res://scenes/title_screen_background.gdshader" id="2_53kok"]
 [ext_resource type="Texture2D" uid="uid://lfwgnuryq8rh" path="res://assets/mondo_normale.png" id="2_oh4uy"]
 [ext_resource type="Script" path="res://scenes/sprite_2d.gd" id="3_46w4r"]
+[ext_resource type="Texture2D" uid="uid://c1eq2dormw2jn" path="res://assets/Sfondo2.png" id="3_b728c"]
 [ext_resource type="FontFile" uid="uid://dqqcurrqs4ko0" path="res://assets/ByteBounce.ttf" id="4_7g4k8"]
 [ext_resource type="Texture2D" uid="uid://dxro3kskbxknd" path="res://assets/New Piskel (2).png" id="6_3pqcb"]
 [ext_resource type="Script" path="res://scenes/events.gd" id="6_vhk76"]
@@ -14,9 +16,15 @@
 [ext_resource type="AudioStream" uid="uid://cj8yo1sugspj4" path="res://assets/sounds/CLICK 1.wav" id="10_wqamb"]
 [ext_resource type="PackedScene" uid="uid://dg1sjsldykkju" path="res://scenes/options_tab.tscn" id="13_7x8iu"]
 
-[sub_resource type="CanvasTexture" id="CanvasTexture_53o80"]
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_jfs7w"]
+shader = ExtResource("2_53kok")
+shader_parameter/height = 2.0
+shader_parameter/frequency = 10.0
+shader_parameter/speed = 1.0
 
 [sub_resource type="Theme" id="Theme_roxym"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_mkth5"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_j350d"]
 texture = ExtResource("2_0oyud")
@@ -33,8 +41,6 @@ expand_margin_top = 5.0
 expand_margin_right = 5.0
 expand_margin_bottom = 5.0
 region_rect = Rect2(42, 55, 38, 14)
-
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_mkth5"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_ratmo"]
 texture = ExtResource("2_0oyud")
@@ -55,12 +61,11 @@ region_rect = Rect2(42, 40, 19, 14)
 [node name="inGame" type="Node2D"]
 script = ExtResource("1_6qcy7")
 
-[node name="Background" type="Sprite2D" parent="."]
-modulate = Color(0.0139623, 0.00027156, 0.0592547, 1)
-self_modulate = Color(0, 0, 0, 1)
-position = Vector2(2.99973, 1.99986)
-scale = Vector2(3770, 2383.15)
-texture = SubResource("CanvasTexture_53o80")
+[node name="Background1" type="Sprite2D" parent="."]
+material = SubResource("ShaderMaterial_jfs7w")
+position = Vector2(-3, -3)
+scale = Vector2(3.28, 3.28)
+texture = ExtResource("3_b728c")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 position = Vector2(0.670166, -7)
@@ -77,10 +82,10 @@ offset_bottom = 167.0
 theme = SubResource("Theme_roxym")
 theme_override_fonts/font = ExtResource("4_7g4k8")
 theme_override_font_sizes/font_size = 48
-theme_override_styles/normal = SubResource("StyleBoxTexture_j350d")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_mkth5")
 theme_override_styles/hover = SubResource("StyleBoxTexture_j350d")
 theme_override_styles/pressed = SubResource("StyleBoxTexture_xpldp")
-theme_override_styles/focus = SubResource("StyleBoxEmpty_mkth5")
+theme_override_styles/normal = SubResource("StyleBoxTexture_j350d")
 text = "Events"
 script = ExtResource("6_vhk76")
 
@@ -92,10 +97,10 @@ offset_bottom = -128.0
 theme = SubResource("Theme_roxym")
 theme_override_fonts/font = ExtResource("4_7g4k8")
 theme_override_font_sizes/font_size = 32
-theme_override_styles/normal = SubResource("StyleBoxTexture_ratmo")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_mkth5")
 theme_override_styles/hover = SubResource("StyleBoxTexture_ratmo")
 theme_override_styles/pressed = SubResource("StyleBoxTexture_45u0t")
-theme_override_styles/focus = SubResource("StyleBoxEmpty_mkth5")
+theme_override_styles/normal = SubResource("StyleBoxTexture_ratmo")
 text = "Stats"
 script = ExtResource("7_yyic5")
 
@@ -107,10 +112,10 @@ offset_bottom = -128.0
 theme = SubResource("Theme_roxym")
 theme_override_fonts/font = ExtResource("4_7g4k8")
 theme_override_font_sizes/font_size = 32
-theme_override_styles/normal = SubResource("StyleBoxTexture_ratmo")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_mkth5")
 theme_override_styles/hover = SubResource("StyleBoxTexture_ratmo")
 theme_override_styles/pressed = SubResource("StyleBoxTexture_45u0t")
-theme_override_styles/focus = SubResource("StyleBoxEmpty_mkth5")
+theme_override_styles/normal = SubResource("StyleBoxTexture_ratmo")
 text = "
 "
 script = ExtResource("8_sj4vq")

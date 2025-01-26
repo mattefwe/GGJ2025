@@ -10,13 +10,18 @@ func _ready() -> void:
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
-	pass
+	if Global.scene_n == 0:
+		visible = false
+	else:
+		visible = true
 
 
 func _on_pressed() -> void:
 	click_pressed.play()
 	await get_tree().create_timer(0.2).timeout
+	Global.opt_on = 0
 	Global.music = 1
+	Global.scene_n = 0
 	get_tree().change_scene_to_file("res://scenes/title_screen.tscn")
 
 
