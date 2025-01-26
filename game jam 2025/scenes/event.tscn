@@ -1,10 +1,11 @@
-[gd_scene load_steps=6 format=3 uid="uid://dq78whhunnx84"]
+[gd_scene load_steps=7 format=3 uid="uid://dq78whhunnx84"]
 
 [ext_resource type="Script" path="res://autoload/evetlist.gd" id="1_vex2u"]
 [ext_resource type="Script" path="res://scenes/Button2option.gd" id="3_5g86p"]
 [ext_resource type="Script" path="res://scenes/Button1option.gd" id="3_q2w8h"]
 [ext_resource type="Script" path="res://scenes/Button3option.gd" id="4_js6os"]
 [ext_resource type="Script" path="res://scenes/Button4option.gd" id="5_sm6kb"]
+[ext_resource type="Script" path="res://scenes/Eventdesc.gd" id="6_26s6n"]
 
 [node name="Event" type="Node2D"]
 script = ExtResource("1_vex2u")
@@ -63,6 +64,14 @@ offset_right = 8.0
 offset_bottom = 8.0
 script = ExtResource("5_sm6kb")
 
+[node name="Label" type="Label" parent="."]
+offset_left = 79.0
+offset_top = 54.0
+offset_right = 119.0
+offset_bottom = 77.0
+scale = Vector2(24.7504, 8.06104)
+script = ExtResource("6_26s6n")
+
 [connection signal="pressed" from="Panel/Button" to="Panel/Button" method="_on_pressed"]
 [connection signal="ready" from="Panel/Button" to="Panel/Button" method="getText"]
 [connection signal="pressed" from="Panel2/Button" to="Panel2/Button" method="_on_pressed"]
@@ -71,3 +80,4 @@ script = ExtResource("5_sm6kb")
 [connection signal="ready" from="Panel3/Button" to="Panel3/Button" method="getText"]
 [connection signal="pressed" from="Panel4/Button" to="Panel4/Button" method="_on_pressed"]
 [connection signal="ready" from="Panel4/Button" to="Panel4/Button" method="getText"]
+[connection signal="ready" from="Label" to="Label" method="getText"]

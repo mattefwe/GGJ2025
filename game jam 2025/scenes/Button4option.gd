@@ -5,7 +5,7 @@ func getText():
 		text = Evetlist.events[int(eventid)-1]["options"][3]["title"]
 		set_text(text)
 		visible = true
-		$"..".visible = false
+		$"..".visible = true
 	else:
 		visible = false
 		$"..".visible = false
