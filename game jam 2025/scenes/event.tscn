@@ -1,84 +1,132 @@
-[gd_scene load_steps=7 format=3 uid="uid://dq78whhunnx84"]
+[gd_scene load_steps=18 format=3 uid="uid://c0aqu8ncic8la"]
 
-[ext_resource type="Script" path="res://autoload/evetlist.gd" id="1_vex2u"]
+[ext_resource type="Shader" path="res://scenes/event_desc.gdshader" id="1_63nvb"]
+[ext_resource type="FontFile" uid="uid://dqqcurrqs4ko0" path="res://assets/ByteBounce.ttf" id="2_swi80"]
 [ext_resource type="Script" path="res://scenes/Button2option.gd" id="3_5g86p"]
 [ext_resource type="Script" path="res://scenes/Button1option.gd" id="3_q2w8h"]
 [ext_resource type="Script" path="res://scenes/Button3option.gd" id="4_js6os"]
+[ext_resource type="Texture2D" uid="uid://kn34nwtgnhnt" path="res://assets/disegno_bottoni.png" id="4_vet0k"]
 [ext_resource type="Script" path="res://scenes/Button4option.gd" id="5_sm6kb"]
 [ext_resource type="Script" path="res://scenes/Eventdesc.gd" id="6_26s6n"]
+[ext_resource type="AudioStream" uid="uid://dcfdagc84f6rb" path="res://assets/sounds/CLICK/CLICK 2.wav" id="9_agvh4"]
+[ext_resource type="AudioStream" uid="uid://c6vjry72injmk" path="res://assets/sounds/CLICK/CLICK 1.wav" id="10_k3yuv"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_nqqfd"]
+shader = ExtResource("1_63nvb")
+shader_parameter/height = 0.8
+shader_parameter/frequency = 2.0
+shader_parameter/speed = 0.5
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_r8ox6"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_321cx"]
+texture = ExtResource("4_vet0k")
+expand_margin_left = 5.0
+expand_margin_top = 5.0
+expand_margin_right = 5.0
+expand_margin_bottom = 5.0
+region_rect = Rect2(1, 85, 38, 14)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_rnvmd"]
+texture = ExtResource("4_vet0k")
+expand_margin_left = 5.0
+expand_margin_top = 5.0
+expand_margin_right = 5.0
+expand_margin_bottom = 5.0
+region_rect = Rect2(42, 55, 38, 14)
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_klhf7"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_qnxnt"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_rhr74"]
 
 [node name="Event" type="Node2D"]
-script = ExtResource("1_vex2u")
-
-[node name="Panel" type="Panel" parent="."]
-offset_left = 236.0
-offset_top = 415.0
-offset_right = 451.0
-offset_bottom = 525.0
-
-[node name="Button" type="Button" parent="Panel"]
-layout_mode = 0
-offset_right = 1706.0
-offset_bottom = 884.0
-scale = Vector2(0.125885, 0.126045)
-theme_override_font_sizes/font_size = 150
-text = "option 1"
-script = ExtResource("3_q2w8h")
-
-[node name="Panel2" type="Panel" parent="."]
-offset_left = 769.0
-offset_top = 415.0
-offset_right = 977.0
-offset_bottom = 518.0
-
-[node name="Button" type="Button" parent="Panel2"]
-layout_mode = 0
-offset_right = 210.0
-offset_bottom = 103.0
-text = "option 2"
-script = ExtResource("3_5g86p")
-
-[node name="Panel3" type="Panel" parent="."]
-offset_left = 235.0
-offset_top = 277.0
-offset_right = 275.0
-offset_bottom = 317.0
-scale = Vector2(5.29499, 2.64238)
-
-[node name="Button" type="Button" parent="Panel3"]
-layout_mode = 0
-offset_right = 8.0
-offset_bottom = 8.0
-script = ExtResource("4_js6os")
-
-[node name="Panel4" type="Panel" parent="."]
-offset_left = 768.0
-offset_top = 277.0
-offset_right = 945.0
-offset_bottom = 371.0
-scale = Vector2(1.17292, 1.13252)
-
-[node name="Button" type="Button" parent="Panel4"]
-layout_mode = 0
-offset_right = 8.0
-offset_bottom = 8.0
-script = ExtResource("5_sm6kb")
 
 [node name="Label" type="Label" parent="."]
-offset_left = 79.0
-offset_top = 54.0
-offset_right = 119.0
-offset_bottom = 77.0
-scale = Vector2(24.7504, 8.06104)
-text = "diocane"
+material = SubResource("ShaderMaterial_nqqfd")
+offset_left = 14.0
+offset_top = 16.0
+offset_right = 1140.0
+offset_bottom = 209.0
+theme_override_fonts/font = ExtResource("2_swi80")
+theme_override_font_sizes/font_size = 48
+text = "Event Desc"
 script = ExtResource("6_26s6n")
 
-[connection signal="pressed" from="Panel/Button" to="Panel/Button" method="_on_pressed"]
-[connection signal="ready" from="Panel/Button" to="Panel/Button" method="getText"]
-[connection signal="pressed" from="Panel2/Button" to="Panel2/Button" method="_on_pressed"]
-[connection signal="ready" from="Panel2/Button" to="Panel2/Button" method="getText"]
-[connection signal="pressed" from="Panel3/Button" to="Panel3/Button" method="_on_pressed"]
-[connection signal="ready" from="Panel3/Button" to="Panel3/Button" method="getText"]
-[connection signal="pressed" from="Panel4/Button" to="Panel4/Button" method="_on_pressed"]
-[connection signal="ready" from="Panel4/Button" to="Panel4/Button" method="getText"]
+[node name="Button" type="Button" parent="."]
+offset_left = 128.0
+offset_top = 448.0
+offset_right = 288.0
+offset_bottom = 512.0
+theme_override_fonts/font = ExtResource("2_swi80")
+theme_override_font_sizes/font_size = 64
+theme_override_styles/focus = SubResource("StyleBoxEmpty_r8ox6")
+theme_override_styles/hover = SubResource("StyleBoxTexture_321cx")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_rnvmd")
+theme_override_styles/normal = SubResource("StyleBoxTexture_321cx")
+text = "Opt 1
+"
+script = ExtResource("3_q2w8h")
+
+[node name="Button2" type="Button" parent="."]
+offset_left = 704.0
+offset_top = 448.0
+offset_right = 864.0
+offset_bottom = 514.0
+theme_override_fonts/font = ExtResource("2_swi80")
+theme_override_font_sizes/font_size = 64
+theme_override_styles/focus = SubResource("StyleBoxEmpty_klhf7")
+theme_override_styles/hover = SubResource("StyleBoxTexture_321cx")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_rnvmd")
+theme_override_styles/normal = SubResource("StyleBoxTexture_321cx")
+text = "Opt 2"
+script = ExtResource("3_5g86p")
+
+[node name="Button3" type="Button" parent="."]
+offset_left = 128.0
+offset_top = 552.0
+offset_right = 288.0
+offset_bottom = 616.0
+theme_override_fonts/font = ExtResource("2_swi80")
+theme_override_font_sizes/font_size = 64
+theme_override_styles/focus = SubResource("StyleBoxEmpty_qnxnt")
+theme_override_styles/hover = SubResource("StyleBoxTexture_321cx")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_rnvmd")
+theme_override_styles/normal = SubResource("StyleBoxTexture_321cx")
+text = "Opt 3"
+script = ExtResource("4_js6os")
+
+[node name="Button4" type="Button" parent="."]
+offset_left = 704.0
+offset_top = 552.0
+offset_right = 864.0
+offset_bottom = 618.0
+theme_override_fonts/font = ExtResource("2_swi80")
+theme_override_font_sizes/font_size = 64
+theme_override_styles/focus = SubResource("StyleBoxEmpty_rhr74")
+theme_override_styles/hover = SubResource("StyleBoxTexture_321cx")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_rnvmd")
+theme_override_styles/normal = SubResource("StyleBoxTexture_321cx")
+text = "Opt 4"
+script = ExtResource("5_sm6kb")
+
+[node name="ClickPressed" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("9_agvh4")
+
+[node name="ClickHover" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("10_k3yuv")
+
 [connection signal="ready" from="Label" to="Label" method="getText"]
+[connection signal="mouse_entered" from="Button" to="Button" method="_on_mouse_entered"]
+[connection signal="pressed" from="Button" to="Button" method="_on_pressed"]
+[connection signal="ready" from="Button" to="Button" method="getText"]
+[connection signal="mouse_entered" from="Button2" to="Button2" method="_on_mouse_entered"]
+[connection signal="pressed" from="Button2" to="Button2" method="_on_pressed"]
+[connection signal="ready" from="Button2" to="Button2" method="getText"]
+[connection signal="mouse_entered" from="Button3" to="Button3" method="_on_mouse_entered"]
+[connection signal="pressed" from="Button3" to="Button3" method="_on_pressed"]
+[connection signal="ready" from="Button3" to="Button3" method="getText"]
+[connection signal="mouse_entered" from="Button4" to="Button4" method="_on_mouse_entered"]
+[connection signal="pressed" from="Button4" to="Button4" method="_on_pressed"]
+[connection signal="ready" from="Button4" to="Button4" method="getText"]

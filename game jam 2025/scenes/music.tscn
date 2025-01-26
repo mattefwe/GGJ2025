@@ -1,17 +1,17 @@
 [gd_scene load_steps=4 format=3 uid="uid://4kyeq5lksbdj"]
 
-[ext_resource type="AudioStream" uid="uid://bp7pr06xwl1xl" path="res://assets/sounds/INTRO copia.ogg" id="1_j56h7"]
 [ext_resource type="Script" path="res://scripts/music.gd" id="1_s8axm"]
-[ext_resource type="AudioStream" uid="uid://5oesckbeu0b4" path="res://assets/sounds/Main Theme_bip_2.1.ogg" id="2_d624p"]
+[ext_resource type="AudioStream" uid="uid://nnsprdh8p3c5" path="res://assets/sounds/TEMI/MAIN THEME/Main Theme 2.ogg" id="2_5ope0"]
+[ext_resource type="AudioStream" uid="uid://dxt3k0jvqfyop" path="res://assets/sounds/TEMI/INTRO/INTRO copia.ogg" id="3_g73y6"]
 
 [node name="Music" type="Node2D"]
 script = ExtResource("1_s8axm")
 
 [node name="BackgroundMusic" type="AudioStreamPlayer2D" parent="."]
-stream = ExtResource("2_d624p")
+stream = ExtResource("2_5ope0")
 volume_db = 4.0
 
 [node name="TitleMusic" type="AudioStreamPlayer2D" parent="."]
-stream = ExtResource("1_j56h7")
+stream = ExtResource("3_g73y6")
 volume_db = 8.0
 autoplay = true
