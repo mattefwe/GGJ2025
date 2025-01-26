@@ -109,7 +109,7 @@ offset_top = 15.0
 offset_right = 295.0
 offset_bottom = 45.0
 min_value = -30.0
-max_value = 0.0
+max_value = 15.0
 value = -28.0
 script = ExtResource("7_tcv8s")
 

@@ -1,4 +1,4 @@
-[gd_scene load_steps=23 format=3 uid="uid://cjpr1b3wgqyej"]
+[gd_scene load_steps=24 format=3 uid="uid://cjpr1b3wgqyej"]
 
 [ext_resource type="Script" path="res://scripts/in_game.gd" id="1_6qcy7"]
 [ext_resource type="Texture2D" uid="uid://kn34nwtgnhnt" path="res://assets/disegno_bottoni.png" id="2_0oyud"]
@@ -8,6 +8,7 @@
 [ext_resource type="Texture2D" uid="uid://c1eq2dormw2jn" path="res://assets/Sfondo2.png" id="3_b728c"]
 [ext_resource type="FontFile" uid="uid://dqqcurrqs4ko0" path="res://assets/ByteBounce.ttf" id="4_7g4k8"]
 [ext_resource type="Texture2D" uid="uid://dxro3kskbxknd" path="res://assets/New Piskel (2).png" id="6_3pqcb"]
+[ext_resource type="Texture2D" uid="uid://bp2dlu0ebnhgn" path="res://assets/Bolla1_mondo.png" id="6_n7qgh"]
 [ext_resource type="Script" path="res://scenes/events.gd" id="6_vhk76"]
 [ext_resource type="PackedScene" uid="uid://dp56fmpt2l14o" path="res://scenes/event_tab.tscn" id="7_ndav0"]
 [ext_resource type="Script" path="res://scenes/stats_button.gd" id="7_yyic5"]
@@ -67,12 +68,17 @@ position = Vector2(-3, -3)
 scale = Vector2(3.28, 3.28)
 texture = ExtResource("3_b728c")
 
-[node name="Sprite2D" type="Sprite2D" parent="."]
+[node name="World" type="Sprite2D" parent="."]
 position = Vector2(0.670166, -7)
 rotation = 3.14159
 scale = Vector2(2.81964, -2.76652)
 texture = ExtResource("2_oh4uy")
 script = ExtResource("3_46w4r")
+
+[node name="Bubble" type="Sprite2D" parent="."]
+position = Vector2(-1, -8)
+scale = Vector2(2.1625, 2.1625)
+texture = ExtResource("6_n7qgh")
 
 [node name="Events" type="Button" parent="."]
 offset_left = -60.0
@@ -158,6 +164,7 @@ offset_bottom = -310.0
 stream = ExtResource("9_fcm2l")
 
 [node name="ClickHover" type="AudioStreamPlayer2D" parent="."]
+position = Vector2(-2, -8)
 stream = ExtResource("10_wqamb")
 
 [node name="options_tab" parent="." instance=ExtResource("13_7x8iu")]
